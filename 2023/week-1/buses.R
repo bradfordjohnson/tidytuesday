@@ -1,5 +1,7 @@
 # load packages
 library(tidyverse)
+library(showtext)
+library(htmltools)
 # library(skimr)
 
 # load data
@@ -38,11 +40,64 @@ bus$max <- as.numeric(bus$max)
 bus <- bus |>
   mutate(is_am = lubridate::am(bus$occurred_on))
 
-bus |>
+bus <- bus |>
+  mutate(route_time = case_when(is_am == TRUE ~ "Morning Bus Delay",
+                                is_am == FALSE ~ "Afternoon Bus Delay"))
+
+bus$route_time <- factor(bus$route_time, levels = c("Morning Bus Delay", "Afternoon Bus Delay"))
+
+# visual prep
+## fonts
+font_add(family = "MulishB",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Mulish-Bold.ttf")
+font_add(family = "Mulish",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Mulish-Regular.ttf")
+font_add(family = "fb",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
+showtext_auto()
+
+## create caption
+caption = paste0("<span style='font-family:fb;'>&#xf09b;</span>",
+                 "<span style='font-family:sans;color:white;'>.</span>",
+                 "<span style='font-family:sans;'>bradfordjohnson</span>")
+
+
+# visualize data
+late_bus <- bus |>
   drop_na() |>
-  filter(max < 1000 & number_of_students_on_the_bus > 0) |>
-  group_by(year, school_age_or_pre_k, is_am) |>
-  summarise(total_time_missed_in_days = round(sum(max)/60/24,0)) |>
-  ggplot(aes(x = year, y = total_time_missed_in_days, fill = is_am)) +
-  geom_col(position = "dodge") +
-  facet_wrap(~school_age_or_pre_k)
+  filter(max < 200 & number_of_students_on_the_bus > 0 & route_time == "Morning Bus Delay") |>
+  group_by(year, route_time) |>
+  summarise(count = n()) |>
+  mutate(to_highlight = ifelse( year >= 2020, "yes", "no")) |>
+  ggplot(aes(x = year, y = count, fill = to_highlight)) +
+  geom_col(position = "dodge", width = .5) +
+  # geom_segment(aes(x = 2020.65, y = -2000, xend = 2022.5, yend = -1900),
+  #              colour = "#ff764a", lineend = "round", linejoin = "mitre",
+  #              arrow = arrow(length = unit(0.1, "inches"))) +
+  scale_fill_manual(values = c("yes" = "#ff764a", "no" = "#374c80")) +
+  geom_label(aes(x = 2021, y = -2000),
+             label = "Post Covid-19",colour = "white", family = "MulishB", size = 20) +
+  labs(title = "Morning School Bus Delays",
+       subtitle = "in New York City",
+       y = "Total Delays",
+       x = "",
+       caption = caption) +
+  scale_y_continuous(expand = c(.05,0)) +
+  scale_x_continuous(breaks = c(2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022), expand = c(0.1,0)) +
+  theme(legend.position = "none",
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.background = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_line(colour = "lightgray"),
+        plot.title = element_text(family = "MulishB", size = 56),
+        axis.title.y = element_text(angle = 90, family = "MulishB", size = 36),
+        text = element_text(family = "Mulish"),
+        axis.text.x = element_text(vjust = 26, colour = "white", family = "MulishB", size = 34),
+        axis.text.y = element_text(family = "MulishB", size = 30),
+        plot.margin = unit(c(4,4,4,4), "pt"),
+        plot.caption = ggtext::element_textbox_simple(color="#444444", size = 32),
+        plot.subtitle = element_text(family = "Mulish", size = 35)
+        )
+late_bus
+ggsave("buses.png", width = 9, height = 9)
