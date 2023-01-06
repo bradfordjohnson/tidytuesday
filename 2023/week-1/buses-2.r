@@ -39,14 +39,23 @@ bus <- bus |>
   mutate(is_am = lubridate::am(bus$occurred_on))
 
 bus <- bus |>
-  mutate(route_time = case_when(is_am == TRUE ~ "Morning",
-                          is_am == FALSE ~ "Afternoon"))
+  mutate(route_time = case_when(is_am == TRUE ~ "Morning Bus Delay",
+                                is_am == FALSE ~ "Afternoon Bus Delay"))
+
+### look for outliers in max (delays) remove them for more accurate times
+bus |>
+  select(-c(boro, bus_company_name, bus_no)) |>
+  filter(max < 200 & number_of_students_on_the_bus > 0) |>
+  arrange(desc(max))
+### maybe do counts of late buses?
+### factor so that morning buses are on the left
+### keep total time missed in days?
+bus$route_time <- factor(bus$route_time, levels = c("Morning Bus Delay", "Afternoon Bus Delay"))
 
 bus |>
   drop_na() |>
-  filter(max < 1000 & number_of_students_on_the_bus > 0) |>
-  group_by(year, school_age_or_pre_k, route_time) |>
-  summarise(total_time_missed_in_days = round(sum(max)/60/24,0)) |>
-  ggplot(aes(x = year, y = total_time_missed_in_days, fill = is_am)) +
-  geom_col(position = "dodge") +
-  facet_wrap(~school_age_or_pre_k)
+  filter(max < 200 & number_of_students_on_the_bus > 0) |>
+  group_by(year, route_time) |>
+  summarise(count = n()) |>
+  ggplot(aes(x = year, y = count, fill = route_time, label = count)) +
+  geom_col(position = "dodge")
