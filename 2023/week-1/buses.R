@@ -100,6 +100,6 @@ late_bus <- bus |>
         plot.margin = unit(c(4,4,4,4), "pt"),
         plot.caption = ggtext::element_textbox_simple(color="#444444", size = 35),
         plot.subtitle = element_text(family = "Mulish", size = 36, colour = "white"),
-        plot.background = element_rect(fill = "#2e2e2e"))
+        plot.background = element_rect(fill = "#2e2e2e", colour = "#2e2e2e"))
 late_bus
 ggsave("buses.png", width = 9, height = 9)
