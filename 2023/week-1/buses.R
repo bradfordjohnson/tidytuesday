@@ -2,6 +2,7 @@
 library(tidyverse)
 library(showtext)
 library(htmltools)
+library(scales)
 # library(skimr)
 
 # load data
@@ -57,9 +58,9 @@ font_add(family = "fb",
 showtext_auto()
 
 ## create caption
-caption = paste0("<span style='font-family:fb;'>&#xf09b;</span>",
-                 "<span style='font-family:sans;color:white;'>.</span>",
-                 "<span style='font-family:sans;'>bradfordjohnson</span>")
+caption = paste0("<span style='font-family:fb;color:#FFFFFF;'>&#xf09b;</span>",
+                 "<span style='font-family:sans;color:#2e2e2e;'>.</span>",
+                 "<span style='font-family:sans;color:#FFFFFF;'>bradfordjohnson</span>")
 
 
 # visualize data
@@ -74,7 +75,7 @@ late_bus <- bus |>
   # geom_segment(aes(x = 2020.65, y = -2000, xend = 2022.5, yend = -1900),
   #              colour = "#ff764a", lineend = "round", linejoin = "mitre",
   #              arrow = arrow(length = unit(0.1, "inches"))) +
-  scale_fill_manual(values = c("yes" = "#ff764a", "no" = "#374c80")) +
+  scale_fill_manual(values = c("yes" = "#ff764a", "no" = "#2f4b7c")) +
   geom_label(aes(x = 2021, y = -2000),
              label = "Post Covid-19",colour = "white", family = "MulishB", size = 20) +
   labs(title = "Morning School Bus Delays",
@@ -82,22 +83,23 @@ late_bus <- bus |>
        y = "Total Delays",
        x = "",
        caption = caption) +
-  scale_y_continuous(expand = c(.05,0)) +
+  scale_y_continuous(expand = c(.05,0), labels = label_number(suffix = "K", scale = 1e-3)) +
   scale_x_continuous(breaks = c(2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022), expand = c(0.1,0)) +
   theme(legend.position = "none",
-        panel.grid.minor = element_blank(),
+        panel.grid.minor.y = element_line(colour = "lightgray", linetype = 3),
+        panel.grid.minor.x = element_blank(),
         panel.grid.major.x = element_blank(),
         panel.background = element_blank(),
         axis.ticks = element_blank(),
         panel.grid.major = element_line(colour = "lightgray"),
-        plot.title = element_text(family = "MulishB", size = 56),
-        axis.title.y = element_text(angle = 90, family = "MulishB", size = 36),
+        plot.title = element_text(family = "MulishB", size = 56, colour = "white"),
+        axis.title.y = element_text(angle = 90, family = "MulishB", size = 36, colour = "white"),
         text = element_text(family = "Mulish"),
         axis.text.x = element_text(vjust = 26, colour = "white", family = "MulishB", size = 34),
-        axis.text.y = element_text(family = "MulishB", size = 30),
+        axis.text.y = element_text(family = "MulishB", size = 30, colour = "white"),
         plot.margin = unit(c(4,4,4,4), "pt"),
         plot.caption = ggtext::element_textbox_simple(color="#444444", size = 32),
-        plot.subtitle = element_text(family = "Mulish", size = 35)
-        )
+        plot.subtitle = element_text(family = "Mulish", size = 35, colour = "white"),
+        plot.background = element_rect(fill = "#2e2e2e"))
 late_bus
 ggsave("buses.png", width = 9, height = 9)
