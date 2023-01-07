@@ -92,14 +92,14 @@ late_bus <- bus |>
         panel.background = element_blank(),
         axis.ticks = element_blank(),
         panel.grid.major = element_line(colour = "lightgray"),
-        plot.title = element_text(family = "MulishB", size = 56, colour = "white"),
-        axis.title.y = element_text(angle = 90, family = "MulishB", size = 36, colour = "white"),
+        plot.title = element_text(family = "MulishB", size = 65, colour = "white"),
+        axis.title.y = element_text(angle = 90, family = "MulishB", size = 38, colour = "white"),
         text = element_text(family = "Mulish"),
-        axis.text.x = element_text(vjust = 26, colour = "white", family = "MulishB", size = 34),
-        axis.text.y = element_text(family = "MulishB", size = 30, colour = "white"),
+        axis.text.x = element_text(vjust = 23, colour = "white", family = "MulishB", size = 40),
+        axis.text.y = element_text(family = "MulishB", size = 34, colour = "white"),
         plot.margin = unit(c(4,4,4,4), "pt"),
-        plot.caption = ggtext::element_textbox_simple(color="#444444", size = 32),
-        plot.subtitle = element_text(family = "Mulish", size = 35, colour = "white"),
+        plot.caption = ggtext::element_textbox_simple(color="#444444", size = 35),
+        plot.subtitle = element_text(family = "Mulish", size = 36, colour = "white"),
         plot.background = element_rect(fill = "#2e2e2e"))
 late_bus
 ggsave("buses.png", width = 9, height = 9)
