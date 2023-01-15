@@ -122,7 +122,7 @@ ggplot(data = map_df) +
   theme_void() +
   theme(legend.position = c(.2,.35),
         legend.title = element_blank(),
-        plot.background = element_rect(fill = "#e6e6e6", colour = "#e6e6e6"),
+        plot.background = element_rect(fill = "#e6e6e6", colour = NA),
         plot.title = element_text(family = "MulishB", size = 75, colour = "black", hjust = .5),
         plot.caption = ggtext::element_textbox_simple(color="#595959", size = 40),
         plot.margin = unit(c(4,4,4,4), "pt"),
