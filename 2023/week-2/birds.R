@@ -102,9 +102,9 @@ font_add(family = "fb",
          regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
 showtext_auto()
 
-caption = paste0("<span style='font-family:fb;color:#595959;'>&#xf09b;</span>",
+caption = paste0("<span style='font-family:fb;color:#404040;'>&#xf09b;</span>",
                  "<span style='font-family:sans;color:#e6e6e6;'>.</span>",
-                 "<span style='font-family:sans;color:#595959;'>bradfordjohnson</span>")
+                 "<span style='font-family:sans;color:#404040;'>bradfordjohnson</span>")
 
 # create visual
 test_map <- map("state", regions = states, project = "bonne", param = 45)
@@ -115,18 +115,20 @@ colors_df <-c("#0074ee", "#C41E3A")
 ggplot(data = map_df) +
   geom_polygon(aes(long, lat, group = group), color = "#e6e6e6", fill = "#404040") +
   geom_jitter(data = selected_birds_df, aes(longitude, latitude, colour = primary_com_name, size = how_many, alpha = .8)) +
-  labs(title = "Birds spotted in the Southeast | 2021",
+  labs(title = "Bluebirds and Cardinals spotted in the Southeast | 2021",
        caption = caption) +
   scale_colour_manual(values = colors_df) +
   guides(size = "none", alpha = "none", colour = guide_legend(override.aes = list(size = 8))) +
   theme_void() +
   theme(legend.position = c(.2,.35),
         legend.title = element_blank(),
-        plot.background = element_rect(fill = "#e6e6e6"),
+        plot.background = element_rect(fill = "#e6e6e6", colour = "#e6e6e6"),
         plot.title = element_text(family = "MulishB", size = 75, colour = "black", hjust = .5),
         plot.caption = ggtext::element_textbox_simple(color="#595959", size = 40),
         plot.margin = unit(c(4,4,4,4), "pt"),
         text = element_text(family = "Mulish"),
-        legend.text = element_text(colour = "black", family = "MulishB", size = 50))
+        legend.text = element_text(colour = "black", family = "MulishB", size = 50)
+        )
   
 ggsave("birds.png", width = 9, height = 9)
+
