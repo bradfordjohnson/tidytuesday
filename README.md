@@ -10,5 +10,9 @@
   <img src="2023/week-1/buses.png" width="60%" /> 
     </a>
     
-**Week 2** | `Bird Feeder Counts:` [Data Source](https://feederwatch.org/explore/raw-dataset-requests/)
+**Week 2** | `Bird FeederWatch data:` [Data Source](https://feederwatch.org/explore/raw-dataset-requests/) 
 ---
+<p align= "center">
+  <a href="2023/week-2/birds.R"> 
+  <img src="2023/week-2/birds.png" width="60%" /> 
+    </a>
