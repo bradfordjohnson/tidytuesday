@@ -1,5 +1,8 @@
 # load packages
 library(tidyverse)
+library(maps)
+library(showtext)
+library(htmltools)
 
 # load feeder watch data
 feederwatch <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-10/PFW_2021_public.csv') |>
@@ -45,7 +48,7 @@ feederwatch <- feederwatch |>
 
 ## remove no longer needed columns
 feederwatch <- feederwatch |>
-  select(-c(subnational1_code, entry_technique, sub_id, obs_id, proj_period_id, month, year, day,
+  select(-c(entry_technique, sub_id, obs_id, proj_period_id, month, year, day,
             valid, reviewed, day1_am, day1_pm, day2_am, day2_pm, snow_dep_atleast, effort_hrs_atleast))
 
 # clean up spec_codes for join
@@ -58,7 +61,72 @@ joined_birds <- feederwatch |>
 
 # re-order joined df
 joined_birds <- joined_birds |>
-  select(loc_id, primary_com_name, date, how_many, data_entry_method, effort_hours, snow_depth, latitude, longitude)
+  select(loc_id, subnational1_code, primary_com_name, date, how_many, data_entry_method, effort_hours, snow_depth, latitude, longitude)
+
+# filter for US southeast
+## create two groups for "winter" & "summer"
+south_east <-c("US-AL", "US-TN", "US-SC", "US-NC", "US-GA", "US-FL", "US-MS")
+
+south_east_birds <- joined_birds |>
+  filter(subnational1_code %in% south_east)
 
 # write as csv
-write_csv(joined_birds, "feederwatch-cleaned.csv")
+write_csv(south_east_birds, "feederwatch-cleaned.csv")
+
+# most common spotted SE birds
+south_east_birds |>
+  group_by(primary_com_name) |>
+  summarise(count = sum(how_many)) |>
+  arrange(desc(count))
+
+# select birds to visualize
+selected_birds <-c("Eastern Bluebird", "Northern Cardinal")
+
+selected_birds_df <- south_east_birds |>
+  filter(primary_com_name %in% selected_birds)
+
+# get map data 
+map_df <- map_data("state")
+
+states <-c("alabama", "florida", "tennessee", "south carolina", "north carolina", "mississippi", "georgia")
+
+map_df <- map_df |>
+  filter(region %in% states)
+
+## fonts
+font_add(family = "MulishB",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Mulish-Bold.ttf")
+font_add(family = "Mulish",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Mulish-Regular.ttf")
+font_add(family = "fb",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
+showtext_auto()
+
+caption = paste0("<span style='font-family:fb;color:#595959;'>&#xf09b;</span>",
+                 "<span style='font-family:sans;color:#e6e6e6;'>.</span>",
+                 "<span style='font-family:sans;color:#595959;'>bradfordjohnson</span>")
+
+# create visual
+test_map <- map("state", regions = states, project = "bonne", param = 45)
+
+# colors
+colors_df <-c("#0074ee", "#C41E3A")
+
+ggplot(data = map_df) +
+  geom_polygon(aes(long, lat, group = group), color = "#e6e6e6", fill = "#404040") +
+  geom_jitter(data = selected_birds_df, aes(longitude, latitude, colour = primary_com_name, size = how_many, alpha = .8)) +
+  labs(title = "Birds spotted in the Southeast | 2021",
+       caption = caption) +
+  scale_colour_manual(values = colors_df) +
+  guides(size = "none", alpha = "none", colour = guide_legend(override.aes = list(size = 8))) +
+  theme_void() +
+  theme(legend.position = c(.2,.35),
+        legend.title = element_blank(),
+        plot.background = element_rect(fill = "#e6e6e6"),
+        plot.title = element_text(family = "MulishB", size = 75, colour = "black", hjust = .5),
+        plot.caption = ggtext::element_textbox_simple(color="#595959", size = 40),
+        plot.margin = unit(c(4,4,4,4), "pt"),
+        text = element_text(family = "Mulish"),
+        legend.text = element_text(colour = "black", family = "MulishB", size = 50))
+  
+ggsave("birds.png", width = 9, height = 9)
