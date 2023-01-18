@@ -16,3 +16,10 @@
   <a href="2023/week-2/birds.R"> 
   <img src="2023/week-2/birds.png" width="60%" /> 
     </a>
+
+**Week 3** | `Art History data:` [Data Source](https://saralemus7.github.io/arthistory/) 
+---
+<p align= "center">
+  <a href="week-3/_.R"> 
+  <img src="week-3/_.png" width="60%" /> 
+    </a>
