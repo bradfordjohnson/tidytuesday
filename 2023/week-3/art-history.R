@@ -39,11 +39,11 @@ align <- ifelse(df$name == "Average", 0, 1)
 # create plot
 df %>% 
   ggplot(aes(y = as.character(edition_number), x = value)) +
-  geom_line(aes(group = edition_number), size = 3, color = "#DCA65C") +
+  geom_line(aes(group = edition_number), size = 3, color = "#B4632F") +
   geom_text(aes(label = name), nudge_y = 0.3, size = 3, color = "#626064", hjust = align, family = font) +
   scale_x_continuous() +
   theme_minimal() +
-  theme(plot.title = element_text(family = font, size = 28, hjust = 0.5, color = "#DCA65C"),
+  theme(plot.title = element_text(family = font, size = 28, hjust = 0.5, color = "#B4632F"),
         plot.title.position = "plot",
         plot.subtitle = element_text(family = font, size = 11, hjust = 0.5, lineheight = 1.1, color = "#626064" ),
         plot.caption.position = "panel",
@@ -60,6 +60,8 @@ df %>%
        x = "\nSpace per Page Ratio",
        caption = caption)
 
-  ggsave("arthistory-v1.png", width = 9, height = 9)
+  ggsave("art-history-v2.png", width = 9, height = 9)
 
   
+  # v1 "#DCA65C"
+  # v2 "#B4632F"
