@@ -18,3 +18,10 @@
   <a href="week-3/art-history.R"> 
   <img src="week-3/art-history-v2.png" width="60%" /> 
     </a>
+
+**Week 4** | `Alone TV Series data:` [Data Source](https://gradientdescending.com/alone-r-package-datasets-from-the-survival-tv-series/) 
+---
+<p align= "center">
+  <a href="week-4/_.R"> 
+  <img src="week-4/_.png" width="60%" /> 
+    </a>
