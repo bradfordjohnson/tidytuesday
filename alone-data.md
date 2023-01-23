@@ -22,6 +22,8 @@
 |profession          |character |Profession          |
 |url                 |character |URL of cast page on the history channel website. Prefix URL with https://www.history.com/shows/alone/cast                 |
 
+<br>
+
 # `loadout.csv`
 
 |variable      |class     |description   |
@@ -48,6 +50,8 @@
 |author                 |character |Author of the beginning quote                 |
 |imdb_rating            |double    |IMDb rating of the episode            |
 |n_ratings              |double    |Number of ratings given for the episode              |
+
+<br>
 
 # `seasons.csv`
 
