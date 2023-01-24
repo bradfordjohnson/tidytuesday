@@ -38,7 +38,13 @@ first_place_items <- first_place_items |>
   mutate(place = "First")
 
 last_place_items <- last_place_items |>
-  mutate(place = "Last")
+  mutate(place = "Last", n = n * -1)
 
 items_bind <- first_place_items |>
   rbind(last_place_items)
+
+# visual
+items_bind |>
+  group_by(place) |>
+  ggplot(aes(x = fct_infreq(item), y = n, fill = place)) +
+  geom_col()
