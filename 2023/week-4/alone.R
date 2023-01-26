@@ -14,7 +14,7 @@ font_add(
 ## create caption
 caption = paste0(
   "<span style='font-family:fb;color:#7A7973;'>&#xf09b;</span>", "<span style='font-family:sans;color:#FFFFFF;'>.</span>",
-  "<span style='font-family:Unbuntu;color:#7A7973;'>bradfordjohnson | TidyTuesday - Week 4</span>"
+  "<span style='font-family:Unbuntu;color:#7A7973;'>bradfordjohnson | TidyTuesday - Week 4 | Original Code: Cedric Scherer</span>"
 )
 
 # Set ggplot theme
