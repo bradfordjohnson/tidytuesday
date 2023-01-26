@@ -104,7 +104,7 @@ showtext_auto()
 
 caption = paste0("<span style='font-family:fb;color:#404040;'>&#xf09b;</span>",
                  "<span style='font-family:sans;color:#e6e6e6;'>.</span>",
-                 "<span style='font-family:sans;color:#404040;'>bradfordjohnson</span>")
+                 "<span style='font-family:sans;color:#404040;'>bradfordjohnson | TidyTuesday - Week 2</span>")
 
 # create visual
 test_map <- map("state", regions = states, project = "bonne", param = 45)
