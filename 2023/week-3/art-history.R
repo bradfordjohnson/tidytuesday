@@ -14,9 +14,9 @@ showtext_auto()
 showtext_opts(dpi = 320)
 
 ## create caption
-caption = paste0("<span style='font-family:fb;color:#626064;'>&#xf09b;</span>",
+caption = paste0("<span style='font-family:fb;color:#626064;'><br>&#xf09b;</span>",
                  "<span style='font-family:sans;color:#f0edd4;'>.</span>",
-                 "<span style='font-family:sans;color:#626064;'>bradfordjohnson | Original Design: Ryan Hart</span>")
+                 "<span style='font-family:sans;color:#626064;'>bradfordjohnson | TidyTuesday - Week 3 | Original Design: Ryan Hart</span>")
 
 
 # load data
