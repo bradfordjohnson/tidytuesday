@@ -23,5 +23,5 @@
 ---
 <p align= "center">
   <a href="week-4/alone.R"> 
-  <img src="week-4/_.png" width="60%" /> 
+  <img src="week-4/alone.png" width="60%" /> 
     </a>
