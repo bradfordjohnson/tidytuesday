@@ -20,6 +20,6 @@
 **Week 3** | `Art History data:` [Data Source](https://saralemus7.github.io/arthistory/) 
 ---
 <p align= "center">
-  <a href="week-3/art-history.R"> 
+  <a href="2023/week-3/art-history.R"> 
   <img src="2023/week-3/art-history-v2.png" width="60%" /> 
     </a>
