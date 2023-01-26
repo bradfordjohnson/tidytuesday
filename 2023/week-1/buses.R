@@ -60,7 +60,7 @@ showtext_auto()
 ## create caption
 caption = paste0("<span style='font-family:fb;color:#FFFFFF;'>&#xf09b;</span>",
                  "<span style='font-family:sans;color:#2e2e2e;'>.</span>",
-                 "<span style='font-family:sans;color:#FFFFFF;'>bradfordjohnson | TidyTuesday - Week 1</span>")
+                 "<span style='font-family:sans;color:#FFFFFF;'>bradfordjohnson | TidyTuesday - 2023 Week 1</span>")
 
 
 # visualize data
