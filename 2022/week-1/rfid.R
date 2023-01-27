@@ -19,7 +19,7 @@ showtext_auto()
 # create caption
 caption = paste0("<span style='font-family:fb;'>&#xf09b;</span>",
                  "<span style='font-family:sans;color:white;'>.</span>",
-                 "<span style='font-family:sans;'>bradfordjohnson</span>")
+                 "<span style='font-family:sans;'>bradfordjohnson | TidyTuesday - 2022 Week 1</span>")
 
 # factor days of the week in order (M-U)
 rfid_df$week_day <- factor(rfid_df$week_day,
@@ -60,4 +60,4 @@ daily_rfid_dist <- rfid_df |>
 
 daily_rfid_dist
 
-ggsave("daily-rfid-dist-v3.png", width = 9, height = 9)
+ggsave("rfid.png", width = 9, height = 9)
