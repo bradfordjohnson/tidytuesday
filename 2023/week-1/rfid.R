@@ -73,10 +73,10 @@ daily_rfid_dist <- rfid_df |>
         axis.text.y = element_text(family = "RobotoB", size = 34),
         plot.margin = unit(c(8,4,8,4), "pt"),
         panel.grid.major = element_line(colour = "#f3f3f3"),
-        panel.background = element_rect(fill = "#ffffff"),
-        plot.background = element_rect(fill = "#ffffff")
+        panel.background = element_rect(fill = "gray90"),
+        plot.background = element_rect(fill = "gray90")
         )
 
 daily_rfid_dist
 
-ggsave("rfid.png", width = 9, height = 9)
+ggsave("rfid-v1.png", width = 9, height = 9)
