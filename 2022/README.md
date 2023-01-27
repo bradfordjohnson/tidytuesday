@@ -1,4 +1,4 @@
-**Week 1** | `Bring your own data:` RFID Data
+**Week 1** | `Bring your own data:`
 ---
 <p align= "center">
   <a href="week-1/rfid.R"> 
