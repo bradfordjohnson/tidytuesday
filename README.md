@@ -3,7 +3,7 @@
 <img src = "https://github.com/rfordatascience/tidytuesday/blob/master/static/tt_logo.png">
   </a>
   
-**Week 1** | `Bring your own data:` RFID Tags
+**Week 1** | `Bring your own data:` Synthetic Data
 ---
 <p align= "center">
   <a href="2023/week-1/rfid.R"> 
