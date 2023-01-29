@@ -2,7 +2,7 @@
 ---
 <p align= "center">
   <a href="week-1/rfid.R"> 
-  <img src="week-1/rfid.png" width="60%" /> 
+  <img src="week-1/rfid-v1.png" width="60%" /> 
     </a>
 
 **Week 2** | `Bird FeederWatch data:` [Data Source](https://feederwatch.org/explore/raw-dataset-requests/) 
