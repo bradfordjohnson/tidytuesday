@@ -1,6 +1,6 @@
 <p align= "center">
 <a href="https://github.com/rfordatascience/tidytuesday">
-<img src = "https://github.com/rfordatascience/tidytuesday/blob/master/static/tt_logo.png">
+<img src = "https://github.com/rfordatascience/tidytuesday/blob/master/static/tt_logo.png" width = "90%" >
   </a>
   
 **Week 1** | `Bring your own data:` Synthetic Data
