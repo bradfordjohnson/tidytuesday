@@ -4,7 +4,7 @@ library(ggridges)
 library(showtext)
 library(htmltools)
   
-# load data
+# load synthetic data
 rfid_df <- read_csv("rfid-tag-data.csv") |>
   janitor::clean_names()
 
@@ -38,7 +38,7 @@ showtext_auto()
 # create caption
 caption = paste0("<span style='font-family:fb;'>&#xf09b;</span>",
                  "<span style='font-family:sans;color:white;'>.</span>",
-                 "<span style='font-family:sans;'>bradfordjohnson | TidyTuesday - 2023 Week 1</span>")
+                 "<span style='font-family:sans;'>bradfordjohnson | TidyTuesday - 2023 Week 1 | Using Synthetic Data</span>")
 
 # factor days of the week in order (M-U)
 rfid_df$week_day <- factor(rfid_df$week_day,
