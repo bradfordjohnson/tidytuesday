@@ -64,10 +64,10 @@ cats_joined |>
   ) +
   theme_minimal() +
   theme(
-    plot.background = element_rect(fill = "white", color = "black"),
+    plot.background = element_rect(fill = "gray100", color = "gray100"),
     plot.title = element_text(family = "Ubuntu", hjust = .5, vjust = 1, size = 58, margin = unit(c(0, 0, 0, 6), "mm")),
     plot.subtitle = element_text(family = font, hjust = .5, size = 32),
-    plot.caption = ggtext::element_textbox_simple(color="gray60", size = 27),
+    plot.caption = ggtext::element_textbox_simple(color="gray20", size = 27),
     plot.margin = unit(c(5.0,7.0,2.5,5.0), "mm"),
     axis.title.x = element_text(family = font, size = 30, margin = unit(c(3, 0, 0, 0), "mm")),
     axis.title.y = element_text(family = font, size = 30, margin = unit(c(0, 3, 0, 0), "mm")),
