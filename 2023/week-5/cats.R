@@ -64,7 +64,7 @@ cats_joined |>
   ) +
   theme_minimal() +
   theme(
-    plot.background = element_rect(fill = "white", color = "white"),
+    plot.background = element_rect(fill = "white", color = "black"),
     plot.title = element_text(family = "Ubuntu", hjust = .5, vjust = 1, size = 58, margin = unit(c(0, 0, 0, 6), "mm")),
     plot.subtitle = element_text(family = font, hjust = .5, size = 32),
     plot.caption = ggtext::element_textbox_simple(color="gray60", size = 27),
