@@ -64,16 +64,20 @@ cats_joined |>
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(family = "Ubuntu", hjust = .5, vjust = 1, size = 20, margin = unit(c(0, 0, 0, 6), "mm")),
-    plot.subtitle = element_text(family = font, hjust = .5),
-    plot.caption = ggtext::element_textbox_simple(color="black", size = 12),
-    plot.margin = unit(c(10,10,10,10), "pt"),
-    axis.title.x = element_text(family = font, size = 12, margin = unit(c(3, 0, 0, 0), "mm")),
-    axis.title.y = element_text(family = font, size = 12, margin = unit(c(0, 3, 0, 0), "mm")),
-    axis.text.x = element_text(family = font, size = 12),
-    axis.text.y = element_text(family = font, size = 12),
+    plot.background = element_rect(fill = "white", color = "white"),
+    plot.title = element_text(family = "Ubuntu", hjust = .5, vjust = 1, size = 58, margin = unit(c(0, 0, 0, 6), "mm")),
+    plot.subtitle = element_text(family = font, hjust = .5, size = 32),
+    plot.caption = ggtext::element_textbox_simple(color="gray60", size = 27),
+    plot.margin = unit(c(5.0,7.0,2.5,5.0), "mm"),
+    axis.title.x = element_text(family = font, size = 30, margin = unit(c(3, 0, 0, 0), "mm")),
+    axis.title.y = element_text(family = font, size = 30, margin = unit(c(0, 3, 0, 0), "mm")),
+    axis.text.x = element_text(family = font, size = 28),
+    axis.text.y = element_text(family = font, size = 28),
     legend.title.align = 0.5,
     legend.text.align = 0.5,
-    legend.title = element_text(family = font, size = 12),
-    legend.text = element_text(family = font, size = 12)
+    legend.title = element_text(family = font, size = 30),
+    legend.text = element_text(family = font, size = 28),
+    legend.position = c(.9,.9),
   )
+
+ggsave("cats.png", width = 9, height = 9)
