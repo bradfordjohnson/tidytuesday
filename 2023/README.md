@@ -32,3 +32,10 @@
   <a href="week-5/cats.R"> 
   <img src="week-5/cats.png" width="60%" /> 
     </a>
+    
+**Week 6** | `Tech Stocks data:` [Data Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-02-07) 
+---
+<p align= "center">
+  <a href="week-6/stocks.R"> 
+  <img src="week-6/stocks.png" width="60%" /> 
+    </a>
