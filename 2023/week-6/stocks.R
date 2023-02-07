@@ -31,11 +31,12 @@ font <- "Ubuntu"
 # caption
 caption = paste0(
   "<span style='font-family:fb;color:#7A7973;'>&#xf09b;</span>", "<span style='font-family:sans;color:#FFFFFF;'>.</span>",
-  "<span style='font-family:Ubuntu;color:#7A7973;'>bradfordjohnson | TidyTuesday - 2023 Week 6</span>"
+  "<span style='font-family:Ubuntu;color:#7A7973;'>bradfordjohnson  | TidyTuesday - 2023 Week 6</span>"
 )
 
 # visualize data
-col_pal <-c("#2e4b5c")
+col_pal <-c("#3d647a")
+col_pal2 <-c("#6c5a98")
 
 stocks <- big_tech_stock_prices |>
   filter(stock_symbol %in% stock_filter)
@@ -43,7 +44,7 @@ stocks <- big_tech_stock_prices |>
 stocks_gg <- stocks |>
     ggplot(aes(x = date, y = high, color = company)) +
       geom_line() +
-      geom_area(mapping = aes(x = date, y = volume / -10000000), fill = col_pal, color = col_pal, alpha = 1) +
+      geom_area(mapping = aes(x = date, y = volume / -10000000), fill = col_pal2, color = col_pal2, alpha = 1) +
       scale_y_continuous(labels = function(x) paste0("$", x),
         breaks = seq(0, 400, len = 5)) +
       scale_color_manual(values = col_pal) +
@@ -52,7 +53,7 @@ stocks_gg <- stocks |>
 stocks_lab <- stocks_gg +
   labs(
     title = "Daily highs falling for Tesla",
-    subtitle = "Along with the falling highs we can see the volume of trades. The lower it appears; the more trades that are occurring.",
+    subtitle = "Along with the falling highs in blue we can see the volume of trades in purple.",
     x = "",
     y = "Daily high / share",
     caption = caption
@@ -67,7 +68,7 @@ stocks_theme <- stocks_lab +
       axis.title.y = element_text(family = font, face = "bold", margin = margin(0,3,0,0, unit = "mm"), size = 34),
       axis.text.y = element_text(family = font, color = "black", size = 26),
       axis.text.x = element_text(family = font, color = "black", size = 26),
-      panel.grid.major = element_line(colour = "gray"),
+      panel.grid.major = element_line(colour = "gray90"),
       panel.grid.minor = element_blank(),
       legend.position = "none",
       text = element_text(family = font),
@@ -89,11 +90,11 @@ stocks_arrow +
   geom_label(mapping = aes(
               x = lubridate::ymd("2011-02-10"), y = -80,
               label = "Volume Traded"),
-              size = 10,
+              size = 11,
               family = "Ubuntu",
-              colour = "black",
+              colour = "#6c5a98",
               label.size = NA,
               fill = "#F3F5F6"
   )
 
-ggsave("stocks.png", width = 9, height = 9)
+ggsave("stocks-v2.png", width = 9, height = 9)
