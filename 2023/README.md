@@ -39,3 +39,10 @@
   <a href="week-6/stocks.R"> 
   <img src="week-6/stocks-v2.png" width="60%" /> 
     </a>
+
+ **Week 7** | `Hollywood age gap data:` [Data Source](https://hollywoodagegap.com/)
+---
+<p align= "center">
+  <a href="week-7/_.R"> 
+  <img src="week-7/_.png" width="60%" /> 
+    </a>
