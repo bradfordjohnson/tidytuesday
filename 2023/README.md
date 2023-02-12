@@ -37,5 +37,5 @@
 ---
 <p align= "center">
   <a href="week-6/stocks.R"> 
-  <img src="week-6/stocks.png" width="60%" /> 
+  <img src="week-6/stocks-v2.png" width="60%" /> 
     </a>
