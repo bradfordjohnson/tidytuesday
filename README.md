@@ -48,6 +48,6 @@
  **Week 7** | `Hollywood age gap data:` [Data Source](https://hollywoodagegap.com/)
 ---
 <p align= "center">
-  <a href="2023/week-7/_.R"> 
-  <img src="2023/week-7/_.png" width="60%" /> 
+  <a href="2023/week-7/age-gaps.R"> 
+  <img src="2023/week-7/age-gaps.png" width="60%" /> 
     </a>
