@@ -46,3 +46,10 @@
   <a href="week-7/age-gaps.R"> 
   <img src="week-7/age-gaps.png" width="60%" /> 
     </a>
+
+ **Week 8** | `Bob Ross Paintings Data data:` [Data Source](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv)
+---
+<p align= "center">
+  <a href="week-8/bob-ross.R"> 
+  <img src="week-8/bob-ross.png" width="60%" /> 
+    </a>
