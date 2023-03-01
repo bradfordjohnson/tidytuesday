@@ -47,9 +47,16 @@
   <img src="week-7/age-gaps.png" width="60%" /> 
     </a>
 
- **Week 8** | `Bob Ross Paintings Data data:` [Data Source](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv)
+ **Week 8** | `Bob Ross Paintings data:` [Data Source](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv)
 ---
 <p align= "center">
   <a href="week-8/bob-ross.R"> 
   <img src="week-8/bob-ross.png" width="60%" /> 
+    </a>
+
+ **Week 9** | `African language sentiment data:` [Data Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-02-28)
+---
+<p align= "center">
+  <a href="week-9/african-languages.R"> 
+  <img src="week-9/african-languages.png" width="60%" /> 
     </a>
