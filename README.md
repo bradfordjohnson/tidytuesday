@@ -27,8 +27,8 @@
 **Week 4** | `Alone TV Series data:` [Data Source](https://gradientdescending.com/alone-r-package-datasets-from-the-survival-tv-series/) 
 ---
 <p align= "center">
-  <a href="2023/week-4/alone.R"> 
-  <img src="2023/week-4/alone.png" width="60%" /> 
+  <a href="2023/2023-01-24/alone.R"> 
+  <img src="2023/2023-01-24/alone.png" width="60%" /> 
     </a>
 
 **Week 5** | `Pet Cats UK data:` [Data Source](https://www.datarepository.movebank.org/handle/10255/move.882/) 
