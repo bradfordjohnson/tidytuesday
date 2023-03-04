@@ -41,8 +41,8 @@
 **Week 6** | `Tech Stocks data:` [Data Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-02-07) 
 ---
 <p align= "center">
-  <a href="2023/week-6/stocks.R"> 
-  <img src="2023/week-6/stocks-v2.png" width="60%" /> 
+  <a href="2023/2023-02-07/stocks.R"> 
+  <img src="2023/2023-02-07/stocks-v2.png" width="60%" /> 
     </a>
 
  **Week 7** | `Hollywood age gap data:` [Data Source](https://hollywoodagegap.com/)
