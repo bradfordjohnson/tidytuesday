@@ -48,8 +48,8 @@
  **Week 7** | `Hollywood age gap data:` [Data Source](https://hollywoodagegap.com/)
 ---
 <p align= "center">
-  <a href="2023/week-7/age-gaps.R"> 
-  <img src="2023/week-7/age-gaps.png" width="60%" /> 
+  <a href="2023/2023-02-14/age-gaps.R"> 
+  <img src="2023/2023-02-14/age-gaps.png" width="60%" /> 
     </a>
 
  **Week 8** | `Bob Ross Paintings data:` [Data Source](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv)
