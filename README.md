@@ -6,8 +6,8 @@
 **Week 1** | `Bring your own data:` Synthetic Data
 ---
 <p align= "center">
-  <a href="2023/week-1/rfid.R"> 
-  <img src="2023/week-1/rfid-v1.png" width="60%" /> 
+  <a href="2023/2023-01-03/rfid.R"> 
+  <img src="2023/2023-01-03/rfid-v1.png" width="60%" /> 
     </a>
     
 **Week 2** | `Bird FeederWatch data:` [Data Source](https://feederwatch.org/explore/raw-dataset-requests/) 
