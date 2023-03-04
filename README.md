@@ -62,6 +62,6 @@
  **Week 9** | `African language sentiment data:` [Data Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-02-28)
 ---
 <p align= "center">
-  <a href="2023/week-9/african-languages.R"> 
-  <img src="2023/week-9/african-languages.png" width="60%" /> 
+  <a href="2023/2023-02-28/african-languages.R"> 
+  <img src="2023/2023-02-28/african-languages.png" width="60%" /> 
     </a>
