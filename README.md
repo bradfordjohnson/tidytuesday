@@ -55,8 +55,8 @@
  **Week 8** | `Bob Ross Paintings data:` [Data Source](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv)
 ---
 <p align= "center">
-  <a href="2023/week-8/bob-ross.R"> 
-  <img src="2023/week-8/bob-ross.png" width="60%" /> 
+  <a href="2023/2023-02-21/bob-ross.R"> 
+  <img src="2023/2023-02-21/bob-ross.png" width="60%" /> 
     </a>
 
  **Week 9** | `African language sentiment data:` [Data Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-02-28)
