@@ -1,3 +1,18 @@
+# ** VISUAL IDEAS ***
+# - picture of numbat that is faded when observations are low and brighter when observations are higher
+
+# - 2 tables, one with months in each col, month with most obs gets a numbat, for other table
+#     it is times for that selected month (sim to drill down) with same image premise
+
+# - table with header cols as months, and rows as times, same premise as idea 1
+
+# - complete visual with text descriptions of findings and if color is used, incorp into text as "highlighting"
+
+# - what do numbats eat? top of table (month) could be the numbat image fading and bright, bottom of table
+#   bottom of table could be what numbats eat, and faded based on n() observations for that hour within respective
+#   col
+
+
 # load packages
 library(tidyverse)
 
