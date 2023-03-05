@@ -6,4 +6,56 @@ numbats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/ti
   janitor::clean_names()
 
 numbats <- numbats |>
-  select(-c(event_date, scientific_name, taxon_concept_id, data_resource_name,dryandra, prcp, tmax, tmin))
+  select(-c(scientific_name, taxon_concept_id, data_resource_name, prcp, tmax, tmin))
+
+# wrangle by hour
+numbats |>
+  drop_na(hour) |>
+  filter(dryandra == TRUE | dryandra == FALSE) |>
+  group_by(dryandra, hour) |>
+  summarise(n = n())
+
+# wrangle by month
+numbats |>
+  drop_na(month) |>
+  filter(dryandra == TRUE | dryandra == FALSE) |>
+  group_by(dryandra, month) |>
+  summarise(n = n())
+
+# wrangle by year
+numbats |>
+  drop_na(year) |>
+  filter(dryandra == TRUE | dryandra == FALSE) |>
+  group_by(dryandra, year) |>
+  summarise(n = n())
+
+# create time / hour df
+time_df <- 0:23
+
+time_df <- data.frame(time_df)
+
+numbats$hour <- as.integer(numbats$hour)
+
+hour <- numbats |>
+  drop_na(hour) |>
+  filter(dryandra == TRUE | dryandra == FALSE) |>
+  group_by(dryandra, hour) |>
+  summarise(n = n())
+
+# found in dryandra
+dryandra <- hour |>
+  filter(dryandra == TRUE)
+
+time_df |>
+  left_join(dryandra, by = c("time_df" = "hour")) |>
+  ggplot(aes(x = time_df, y = n)) +
+  geom_col()
+
+# not in dryandra
+not_dryandra <- hour |>
+  filter(dryandra == FALSE)
+
+time_df |>
+  left_join(not_dryandra, by = c("time_df" = "hour")) |>
+  ggplot(aes(x = time_df, y = n)) +
+  geom_col()
