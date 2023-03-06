@@ -1,76 +1,86 @@
-# ** VISUAL IDEAS ***
-# - picture of numbat that is faded when observations are low and brighter when observations are higher
-
-# - 2 tables, one with months in each col, month with most obs gets a numbat, for other table
-#     it is times for that selected month (sim to drill down) with same image premise
-
-# - table with header cols as months, and rows as times, same premise as idea 1
-
-# - complete visual with text descriptions of findings and if color is used, incorp into text as "highlighting"
-
-# - what do numbats eat? top of table (month) could be the numbat image fading and bright, bottom of table
-#   bottom of table could be what numbats eat, and faded based on n() observations for that hour within respective
-#   col
-
-
 # load packages
 library(tidyverse)
+library(camcorder)
+library(ggpath)
+library(showtext)
+library(htmltools)
+
+showtext_auto()
 
 # load data
 numbats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-03-07/numbats.csv') |>
   janitor::clean_names()
 
+local_image_path <- "numbat.png"
+
 numbats <- numbats |>
   select(-c(scientific_name, taxon_concept_id, data_resource_name, prcp, tmax, tmin))
 
-# wrangle by hour
-numbats |>
-  drop_na(hour) |>
-  filter(dryandra == TRUE | dryandra == FALSE) |>
-  group_by(dryandra, hour) |>
-  summarise(n = n())
-
 # wrangle by month
-numbats |>
+num_month <- numbats |>
   drop_na(month) |>
-  filter(dryandra == TRUE | dryandra == FALSE) |>
-  group_by(dryandra, month) |>
-  summarise(n = n())
+  group_by(month) |>
+  summarise(n = n()) |>
+  mutate(path = local_image_path)
 
-# wrangle by year
-numbats |>
-  drop_na(year) |>
-  filter(dryandra == TRUE | dryandra == FALSE) |>
-  group_by(dryandra, year) |>
-  summarise(n = n())
+# start recording
+gg_record(
+  dir = file.path("2023", "2023-03-07", "recording"), # where to save the recording
+  device = "png", # device to use to save images
+  width = 6, # width of saved image
+  height = 6, # height of saved image
+  units = "in", # units for width and height
+  dpi = 300 # dpi to use when saving image
+)
 
-# create time / hour df
-time_df <- 0:23
+# load fonts
+font_add(family = "fb",
+         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
 
-time_df <- data.frame(time_df)
+font_add_google(name = "Roboto", family = "Roboto")
+font <- "Roboto"
 
-numbats$hour <- as.integer(numbats$hour)
+font_add_google(name = "Dosis", family = "Dosis")
 
-hour <- numbats |>
-  drop_na(hour) |>
-  filter(dryandra == TRUE | dryandra == FALSE) |>
-  group_by(dryandra, hour) |>
-  summarise(n = n())
+font_add_google(name = "Neucha", family = "Neucha")
 
-# found in dryandra
-dryandra <- hour |>
-  filter(dryandra == TRUE)
+# load caption
+caption = paste0("<span style='font-family:fb;'>&#xf09b;</span>",
+                 "<span style='font-family:sans;color:white;'>.</span>",
+                 "<span style='font-family:Dosis;'>bradfordjohnson | TidyTuesday - 2023 Week 10</span>")
 
-time_df |>
-  left_join(dryandra, by = c("time_df" = "hour")) |>
-  ggplot(aes(x = time_df, y = n)) +
-  geom_col()
+# visualize
+num_month$month <- factor(num_month$month, levels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec"))
 
-# not in dryandra
-not_dryandra <- hour |>
-  filter(dryandra == FALSE)
+ggplot(num_month, aes(x = 0, y = 0, label = paste("Seen:", n, sep = " "))) +
+  geom_from_path(aes(path = path), width = 0.6, alpha = num_month$n / 212) +
+  facet_wrap(~month) +
+  scale_y_continuous(limits = c(-1,1)) +
+  geom_text(nudge_y = -0.65, size = 18, family = "Neucha") +
+  theme_bw() +
+  labs(title = "The Numbat Tracker",
+       caption = caption) +
+  theme(legend.position = "bottom",
+        plot.margin = unit(c(4,10,4,10), "mm"),
+        strip.background = element_rect(fill = "#c64040", color = "#c64040"),
+        strip.text = element_text(size = 40, color = "white", face = "bold", family = font),
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_rect(colour = "white"),
+        panel.border = element_blank(),
+        plot.background = element_rect(fill = "#d9d9d9"),
+        plot.caption = ggtext::element_textbox_simple(color="gray30", size = 25, margin = margin(2,0,0,0,"mm")),
+        plot.title = element_text(family = "Neucha", size = 65, hjust = .5, margin = margin(0,0,4,0,"mm")))
+  
+# save gif
+gg_playback(
+  name = file.path("2023", "2023-03-07","20230307.gif"),
+  first_image_duration = 4,
+  last_image_duration = 20,
+  frame_duration = .25,
+  background = "#F0F5F5"
+)
 
-time_df |>
-  left_join(not_dryandra, by = c("time_df" = "hour")) |>
-  ggplot(aes(x = time_df, y = n)) +
-  geom_col()
+ggsave("numbats.png", width = 9, height = 9)
