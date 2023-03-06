@@ -65,3 +65,10 @@
   <a href="2023/2023-02-28/african-languages.R"> 
   <img src="2023/2023-02-28/african-languages.png" width="60%" /> 
     </a>
+
+ **Week 10** | `Numbats in Australia data:` [Data Source](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-03-07/numbats.csv)
+---
+<p align= "center">
+  <a href="2023/2023-03-07/numbats.R"> 
+  <img src="2023/2023-03-07/numbats.png" width="60%" /> 
+    </a>
