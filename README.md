@@ -90,6 +90,6 @@
    **Week 13** | `Time zones data:` [Data Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-03-28/readme.md)
 ---
 <p align= "center">
-  <a href="2023/2023-03-28/timezones.R"> 
-  <img src="2023/2023-03-28/timezones.png" width="60%" /> 
+  <a href="2023/2023-03-28/timezones-v2.R"> 
+  <img src="2023/2023-03-28/timezones-v2.png" width="60%" /> 
     </a>
