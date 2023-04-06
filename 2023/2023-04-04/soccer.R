@@ -28,7 +28,6 @@ gg_record(
 )
 
 soccer |>
-  # filter(referee %in% ref_fil) |>
   select(referee, hf, af, hy, ay, hr, ar) |>
   group_by(referee) |>
   summarise(across(c(hf, af, hy, ay, hr, ar), list(mean = mean, sum = sum, median = median))) |>
@@ -37,8 +36,9 @@ soccer |>
   geom_segment(aes(xend = hy_mean, x = ay_mean, yend = referee, y = referee), color = "#654A53") +
   geom_point(aes(x = hy_mean, y = referee), color = "#FFB600") +
   geom_point(aes(x = ay_mean, y = referee), color = "#0189B9") +
-  labs(title = "English Premier League Referees 2021-22",
+  labs(title = "English Premier League Referee 2021-22",
        x = "Average yellow cards given per match") +
+  
   theme(
     plot.background = element_rect(fill = bg, color = bg),
     panel.background = element_rect(fill = bg, color = bg),
@@ -48,7 +48,7 @@ soccer |>
     axis.title.y = element_blank(),
     axis.title.x = element_text(margin = margin(2,0,0,0,"mm")),
     plot.title = element_text(hjust = .5),
-    plot.margin = unit(c(2,18,2,1), "mm")
+    plot.margin = unit(c(2,20,2,2), "mm")
     )
 
 # save gif **CHANGE INFO**
