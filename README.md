@@ -100,3 +100,10 @@
   <a href="2023/2023-04-04/soccer.R"> 
   <img src="2023/2023-04-04/soccer.png" width="60%" /> 
     </a>
+
+   **Week 15** | `US Egg Production data:` [Data Source](https://osf.io/z2gxn/)
+---
+<p align= "center">
+  <a href="2023/2023-04-11/eggs.R"> 
+  <img src="2023/2023-04-11/eggs.png" width="60%" /> 
+    </a>
