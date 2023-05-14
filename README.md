@@ -128,3 +128,11 @@
   <a href="2023/2023-05-02/portal_project.R"> 
   <img src="2023/2023-05-02/portal_project.png" width="60%" /> 
     </a>
+
+  
+   **Week 19** | `Childcare Costs data:` [Data Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-05-09/readme.md)
+---
+<p align= "center">
+  <a href="2023/2023-05-09/child_care.R"> 
+  <img src="2023/2023-05-09/child_care.png" width="60%" /> 
+    </a>   
