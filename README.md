@@ -142,3 +142,10 @@
   <a href="2023/2023-05-16/tornados.R"> 
   <img src="2023/2023-05-16/tornados.png" width="60%" /> 
     </a>   
+  
+   **Week 21** | `Central Park Squirrel Census data:` [Data Source](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw)
+---
+<p align= "center">
+  <a href="2023/2023-05-23/squirrels.R"> 
+  <img src="2023/2023-05-23/squirrels.png" width="60%" /> 
+    </a>   
