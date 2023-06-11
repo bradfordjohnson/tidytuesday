@@ -51,5 +51,5 @@ squirrel_data |>
         panel.background = element_rect(fill = "white", colour = "white"),
         strip.text = element_text(family = font_1, size = 8, face = "bold"))
 
-ggsave("squirrels.png", dpi = 300)
+ggsave("squirrels.png", width = 6, height = 6)
   
