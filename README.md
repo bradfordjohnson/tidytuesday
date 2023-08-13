@@ -156,4 +156,10 @@
   <a href="2023/2023-05-30/oldest_people.R"> 
   <img src="2023/2023-05-30/oldest_people.png" width="90%" /> 
     </a>   
-
+  
+   **Week 23** | `Energy Data:` [Data Source](https://ourworldindata.org/explorers/energy)
+---
+<p align= "center">
+  <a href="2023/2023-06-06/owid_energy.R"> 
+  <img src="2023/2023-06-06/owid_energy.png" width="90%" /> 
+    </a>   
