@@ -163,3 +163,10 @@
   <a href="2023/2023-06-06/owid_energy.R"> 
   <img src="2023/2023-06-06/owid_energy.png" width="90%" /> 
     </a>   
+  
+   **Week 24** | `SAFI Survey data` [Data Source](https://datacarpentry.org/socialsci-workshop/data/)
+---
+<p align= "center">
+  <a href="2023/2023-06-013/safi.R"> 
+  <img src="2023/2023-06-13/safi.png" width="90%" /> 
+    </a>   
