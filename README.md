@@ -149,3 +149,11 @@
   <a href="2023/2023-05-23/squirrels.R"> 
   <img src="2023/2023-05-23/squirrels.png" width="60%" /> 
     </a>   
+  
+   **Week 22** | `Verified Oldest People data:` [Data Source](https://github.com/frankiethull/centenarians)
+---
+<p align= "center">
+  <a href="2023/2023-05-30/oldest_people.R"> 
+  <img src="2023/2023-05-30/oldest_people.png" width="90%" /> 
+    </a>   
+
