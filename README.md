@@ -185,7 +185,7 @@
   <img src="2023/2023-06-27/us-pop-places.png" width="90%" /> 
     </a>   
       
-   **Week 26** | `US Populated Places data` [Data Source](https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/GeographicNames/)
+   **Week 27** | `Historical Markers data` [Data Source](https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/GeographicNames/)
 ---
 <p align= "center">
   <a href="2023/2023-07-04/historical-markers.R"> 
