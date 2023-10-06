@@ -191,3 +191,10 @@
   <a href="2023/2023-07-04/historical-markers.R"> 
   <img src="2023/2023-07-04/historical-markers.png" width="90%" /> 
     </a> 
+
+   **Week 28** | `Global Surface Temperatures` [Data Source](https://data.giss.nasa.gov/gistemp/)
+---
+<p align= "center">
+  <a href="2023/2023-07-11/global-temps.R"> 
+  <img src="2023/2023-07-11/global-temps.png" width="90%" /> 
+    </a> 
