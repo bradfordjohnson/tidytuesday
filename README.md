@@ -198,3 +198,10 @@
   <a href="2023/2023-07-11/global-temps.R"> 
   <img src="2023/2023-07-11/global-temps.png" width="90%" /> 
     </a> 
+
+   **Week 29** | `GPT detectors` [Data Source](https://github.com/simonpcouch/detectors/)
+---
+<p align= "center">
+  <a href="2023/2023-07-18/gpt.R"> 
+  <img src="2023/2023-07-18/gpt.png" width="90%" /> 
+    </a> 
