@@ -205,3 +205,10 @@
   <a href="2023/2023-07-18/gpt.R"> 
   <img src="2023/2023-07-18/gpt.png" width="90%" /> 
     </a> 
+
+   **Week 30** | `Scurvy` [Data Source](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.html)
+---
+<p align= "center">
+  <a href="2023/2023-07-25/scurvy.R"> 
+  <img src="2023/2023-07-25/scurvy.png" width="80%" /> 
+    </a> 
