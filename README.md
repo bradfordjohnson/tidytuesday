@@ -212,3 +212,10 @@
   <a href="2023/2023-07-25/scurvy.R"> 
   <img src="2023/2023-07-25/scurvy.png" width="80%" /> 
     </a> 
+
+   **Week 31** | `US States` [Data Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-08-01/readme.md)
+---
+<p align= "center">
+  <a href="2023/2023-08-01/us-states.R"> 
+  <img src="2023/2023-08-01/us-states.png" width="80%" /> 
+    </a> 
