@@ -219,3 +219,10 @@
   <a href="2023/2023-08-01/us-states.R"> 
   <img src="2023/2023-08-01/us-states.png" width="80%" /> 
     </a> 
+
+   **Week 32** | `Hot Ones Episodes` [Data Source](https://en.wikipedia.org/wiki/Hot_Ones)
+---
+<p align= "center">
+  <a href="2023/2023-08-08/hot-ones.R"> 
+  <img src="2023/2023-08-08/hot-ones.png" width="80%" /> 
+    </a> 
