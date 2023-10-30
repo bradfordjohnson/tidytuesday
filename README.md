@@ -226,3 +226,10 @@
   <a href="2023/2023-08-08/hot-ones.R"> 
   <img src="2023/2023-08-08/hot-ones.png" width="80%" /> 
     </a> 
+
+   **Week 33** | `Spam E-mail` [Data Source](https://vincentarelbundock.github.io/Rdatasets/doc/DAAG/spam7.html)
+---
+<p align= "center">
+  <a href="2023/2023-08-15/spam-emails.R"> 
+  <img src="2023/2023-08-15/spam-emails.png" width="80%" /> 
+    </a>
