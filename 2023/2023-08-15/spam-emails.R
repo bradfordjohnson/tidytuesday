@@ -100,6 +100,20 @@ ggplot(data = confusion_df, aes(x = Reference, y = Prediction)) +
       margin = unit(c(0, 2, 0, 0), "mm"),
     ),
     legend.position = "bottom",
+    axis.title.x = element_text(
+      family = font_2,
+      color = text_color,
+      size = 10,
+      margin = unit(c(0, 0, 2, 0), "mm")
+    ),
+    axis.title.y = element_text(
+      family = font_2,
+      color = text_color,
+      size = 10,
+      margin = unit(c(0, 2, 0, 0), "mm"),
+      angle = 90
+    ),
   )
 
 ggsave("spam-emails.png", width = 6, height = 6, dpi = 300)
+
