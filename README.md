@@ -247,3 +247,10 @@
   <a href="2023/2023-08-29/fair-use.R">
   <img src="2023/2023-08-29/fair-use.png" width="100%" />
     </a>
+
+   **Week 34** | `Refugees` [Data Source](https://vincentarelbundock.github.io/Rdatasets/doc/DAAG/spam7.html)
+---
+<p align= "center">
+  <a href="2023/2023-08-22/refugees.R"> 
+  <img src="2023/2023-08-22/refugees.png" width="100%" /> 
+    </a>
