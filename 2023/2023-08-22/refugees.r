@@ -12,9 +12,9 @@ font_1 <- "Roboto"
 
 colors_json <- fromJSON("assets/colors.json")
 
-background_color <- colors_json$nord$snow_storm$nord6
+background_color <- "#ffffff"
 
-text_color <- colors_json$nord$polar_night$nord0
+text_color <- colors_json$nord$polar_night$nord1
 
 color_pal <- c(colors_json$nord$frost$nord10, colors_json$nord$aurora$nord11, colors_json$nord$snow_storm$nord4, colors_json$nord$aurora$nord12)
 
@@ -87,11 +87,13 @@ refugees_long_with_distances %>%
             halign = .1,
             size = 14,
             color = text_color
+            
         ),
         plot.margin = margin(5, 5, 5, 5, 'mm'),
         legend.title = element_blank(),
-        panel.grid.major.y = element_line(color = colors_json$nord$polar_night$nord0, size = .1, linetype = "dotted"),
         axis.text = element_text(color = text_color, family = font_1, size = 7),
         axis.title.y = element_text(color = text_color, family = font_1, size = 7, angle = 90, margin = margin(0, 5, 0, 1, "mm")),
         legend.text = element_text(color = text_color, family = font_1, size = 7),
     )
+
+ggsave("2023/2023-08-22/refugees.png")
