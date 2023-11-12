@@ -19,8 +19,10 @@ text_color <- colors_json$nord$snow_storm$nord4
 label_color <- colors_json$nord$polar_night$nord3
 
 color_pal <-
-  c(colors_json$nord$frost$nord9,
-    colors_json$nord$snow_storm$nord4)
+  c(
+    colors_json$nord$frost$nord9,
+    colors_json$nord$snow_storm$nord4
+  )
 
 caption <- create_caption(2023, 35, background_color, font = font_1)
 
@@ -49,20 +51,24 @@ target_categories <- fair_use_cases %>%
 fair_use_cases %>%
   group_by(categories, fair_use_found) %>%
   count() %>%
-  mutate(n = case_when(fair_use_found == TRUE ~ n * 1,
-                       fair_use_found == FALSE ~ n * -1)) %>%
+  mutate(n = case_when(
+    fair_use_found == TRUE ~ n * 1,
+    fair_use_found == FALSE ~ n * -1
+  )) %>%
   mutate(lab_y = case_when(n > 0 ~ 2, n < 0 ~ -3)) %>%
   filter(categories %in% target_categories) %>%
   ggplot(aes(
-    x = reorder(categories,-n),
+    x = reorder(categories, -n),
     y = n,
     fill = fair_use_found
   )) +
   geom_col() +
   scale_fill_manual(values = color_pal) +
   geom_text(
-    aes(label = abs(n),
-        y = lab_y),
+    aes(
+      label = abs(n),
+      y = lab_y
+    ),
     vjust = 0,
     color = label_color,
     size = 2
