@@ -282,3 +282,11 @@
   <a href="2023/2023-08-29/fair-use.R">
   <img src="2023/2023-08-29/fair-use.png" width="100%" />
     </a>
+
+**Week 36** | `Union Membership in the United States` [Data Source](https://www.unionstats.com/)
+---
+
+<p align= "center">
+  <a href="2023/2023-09-05/union-membership.R">
+  <img src="2023/2023-09-05/union-membership.png" width="100%" />
+    </a>
