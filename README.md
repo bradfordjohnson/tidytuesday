@@ -6,7 +6,7 @@ I enjoy exploring diverse datasets through this social data project, as it allow
 
 ## Visuals
 
-Check out my visuals from each year below:
+Explore my weekly visualizations from each year below:
 
 | Year                   |
 |------------------------|
