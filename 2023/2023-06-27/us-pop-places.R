@@ -1,7 +1,9 @@
-pacman::p_load(tidyverse,
-               showtext,
-               htmltools,
-               sf)
+pacman::p_load(
+  tidyverse,
+  showtext,
+  htmltools,
+  sf
+)
 
 showtext_auto()
 showtext_opts(dpi = 300)
@@ -17,8 +19,8 @@ font_add_google(name = "Roboto", family = "Roboto")
 font_2 <- "Roboto"
 
 
-us_place_names <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-27/us_place_names.csv')
-us_place_history <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-27/us_place_history.csv')
+us_place_names <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-27/us_place_names.csv")
+us_place_history <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-27/us_place_history.csv")
 
 ghost_towns <- us_place_history |>
   filter(description == "A ghost town.")
@@ -55,15 +57,16 @@ ggplot() +
     panel.background = element_rect(fill = plot_bg, color = plot_bg),
     plot.margin = margin(10, 1, 10, 1),
     plot.title = ggtext::element_textbox_simple(
-      family = font_1, 
+      family = font_1,
       margin = margin(5, 0, 5, 0),
       halign = .5,
       size = 18,
-      color = text_col),
+      color = text_col
+    ),
     plot.caption = ggtext::element_textbox_simple(
       margin = margin(6, 0, 0, 0),
       halign = .5, color = text_col, size = 7
     ),
-    )
+  )
 
-ggsave("us-pop-places.png", height = 6, width = 6)   
+ggsave("us-pop-places.png", height = 6, width = 6)

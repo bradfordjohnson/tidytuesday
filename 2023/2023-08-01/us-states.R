@@ -1,13 +1,17 @@
-pacman::p_load(tidyverse,
-               stringr,
-               showtext,
-               htmltools)
+pacman::p_load(
+  tidyverse,
+  stringr,
+  showtext,
+  htmltools
+)
 
 showtext_auto()
 showtext_opts(dpi = 300)
 
-font_add(family = "fb", regular =
-           "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
+font_add(
+  family = "fb", regular =
+    "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf"
+)
 
 font_add_google(name = "Roboto Slab", family = "Roboto Slab")
 font_1 <- "Roboto Slab"
@@ -30,7 +34,7 @@ subtitle <-
 
 states <-
   readr::read_csv(
-    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-01/states.csv'
+    "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-01/states.csv"
   )
 
 text_col <- "#ECEFF4"
@@ -40,10 +44,11 @@ bg_color <- "#4C566A"
 find_differences <- function(string1, string2) {
   chars1 <- strsplit(string1, "")[[1]]
   chars2 <- strsplit(string2, "")[[1]]
-  
+
   differences <-
-    mapply(function(x, y)
-      ifelse(x == y, " ", y), chars1, chars2)
+    mapply(function(x, y) {
+      ifelse(x == y, " ", y)
+    }, chars1, chars2)
   paste(differences, collapse = "")
 }
 
@@ -74,10 +79,11 @@ states |>
     size = 2
   ) +
   theme_void() +
-  
-  labs(title = title,
-       caption = caption,
-       subtitle = subtitle) +
+  labs(
+    title = title,
+    caption = caption,
+    subtitle = subtitle
+  ) +
   theme(
     plot.background = element_rect(fill = bg_color, color = bg_color),
     panel.background = element_rect(fill = bg_color, color = bg_color),
@@ -87,23 +93,23 @@ states |>
       size = 6,
       vjust = 1.4
     ),
-    plot.margin = margin(5, 5, 5, 5, 'mm'),
+    plot.margin = margin(5, 5, 5, 5, "mm"),
     plot.caption = ggtext::element_textbox_simple(
-      margin = margin(6, 0, 0, 0, 'mm'),
+      margin = margin(6, 0, 0, 0, "mm"),
       halign = 1,
       color = text_col,
       size = 5,
     ),
     plot.title = ggtext::element_textbox_simple(
       family = font_1,
-      margin = margin(0, 0, 2, 0, 'mm'),
+      margin = margin(0, 0, 2, 0, "mm"),
       halign = .1,
       size = 15,
       color = text_col_2
     ),
     plot.subtitle = ggtext::element_textbox_simple(
       family = font_1,
-      margin = margin(0, 0, 5, 0, 'mm'),
+      margin = margin(0, 0, 5, 0, "mm"),
       halign = .1,
       size = 10,
       color = text_col_2
@@ -111,6 +117,7 @@ states |>
   )
 
 ggsave("us-states.png",
-       width = 6,
-       height = 4,
-       dpi = 300)
+  width = 6,
+  height = 4,
+  dpi = 300
+)

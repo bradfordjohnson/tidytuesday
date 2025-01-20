@@ -6,14 +6,14 @@ library(htmltools)
 showtext_auto()
 
 # load data
-age_gaps <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-14/age_gaps.csv')
+age_gaps <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-14/age_gaps.csv")
 
 # wrangle data
 age_gaps <- age_gaps |>
   mutate(relationship = case_when(
     character_1_gender == "man" ~ "Older Man; Younger Partner",
     character_1_gender == "woman" ~ "Older Woman; Younger Partner"
-    ))
+  ))
 
 
 # create base visual
@@ -26,8 +26,10 @@ vis <- age_gaps |>
   theme_minimal()
 
 # import fonts
-font_add(family = "fb",
-         regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
+font_add(
+  family = "fb",
+  regular = "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf"
+)
 
 font_add_google(name = "Oswald", family = "Oswald")
 font_1 <- "Oswald"
@@ -39,9 +41,11 @@ font_add_google(name = "Roboto", family = "Roboto")
 font_3 <- "Roboto"
 
 # labs
-caption = paste0("<span style='font-family:fb;'>&#xf09b;</span>",
-                 "<span style='font-family:sans;color:#F5F5F4;'>.</span>",
-                 "<span style='font-family:Roboto;'>bradfordjohnson | TidyTuesday - 2023 Week 7</span>")
+caption <- paste0(
+  "<span style='font-family:fb;'>&#xf09b;</span>",
+  "<span style='font-family:sans;color:#F5F5F4;'>.</span>",
+  "<span style='font-family:Roboto;'>bradfordjohnson | TidyTuesday - 2023 Week 7</span>"
+)
 
 # add labs to plot
 vis <- vis +
@@ -56,12 +60,12 @@ vis <- vis +
 # customize theme
 vis +
   theme(
-    plot.title = element_text(family = font_1, hjust = .5, vjust = 0, size = 60, margin = margin(0,0,3,0, unit = "mm")),
+    plot.title = element_text(family = font_1, hjust = .5, vjust = 0, size = 60, margin = margin(0, 0, 3, 0, unit = "mm")),
     plot.subtitle = element_text(family = font_2, hjust = .5, size = 37),
-    plot.caption = ggtext::element_textbox_simple(color="black", size = 28, halign = 1),
-    plot.margin = unit(c(10,10,10,10), "pt"),
-    axis.title.x = element_text(family = font_2, size = 32, margin = margin(3,0,3,0, unit = "mm"), face = "bold"),
-    axis.title.y = element_text(family = font_2, size = 32, margin = margin(0,3,0,0, unit = "mm"), face = "bold"),
+    plot.caption = ggtext::element_textbox_simple(color = "black", size = 28, halign = 1),
+    plot.margin = unit(c(10, 10, 10, 10), "pt"),
+    axis.title.x = element_text(family = font_2, size = 32, margin = margin(3, 0, 3, 0, unit = "mm"), face = "bold"),
+    axis.title.y = element_text(family = font_2, size = 32, margin = margin(0, 3, 0, 0, unit = "mm"), face = "bold"),
     axis.text.x = element_text(family = font_2, size = 28),
     axis.text.y = element_text(family = font_2, size = 28),
     legend.position = "none",

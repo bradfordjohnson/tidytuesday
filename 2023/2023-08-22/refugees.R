@@ -1,6 +1,6 @@
 pacman::p_load(tidyverse, htmltools, showtext, jsonlite)
 
-source("functions/caption.r")
+source("2023/functions/caption.r")
 
 showtext_auto()
 showtext_opts(dpi = 300)
@@ -87,9 +87,8 @@ refugees_long_with_distances %>%
             halign = .1,
             size = 14,
             color = text_color
-            
         ),
-        plot.margin = margin(5, 5, 5, 5, 'mm'),
+        plot.margin = margin(5, 5, 5, 5, "mm"),
         legend.title = element_blank(),
         axis.text = element_text(color = text_color, family = font_1, size = 7),
         axis.title.y = element_text(color = text_color, family = font_1, size = 7, angle = 90, margin = margin(0, 5, 0, 1, "mm")),

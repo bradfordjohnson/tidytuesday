@@ -1,6 +1,6 @@
 pacman::p_load(tidyverse, htmltools, showtext, jsonlite)
 
-source("functions/caption.r")
+source("2023/functions/caption.r")
 
 showtext_auto()
 showtext_opts(dpi = 300)

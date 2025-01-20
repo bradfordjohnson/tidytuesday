@@ -80,13 +80,15 @@ centenarians |>
     color = "none"
   ) +
   scale_y_continuous(
-    limits = c(110,125)
+    limits = c(110, 125)
   ) +
   theme(
-    plot.margin = unit(c(4,4,4,4), "mm"),
-    plot.title = element_text(family = font_1, size = 15, hjust = 0, face = "plain", margin = margin(0,0,2,0,"mm"), color = "black"),
-    plot.subtitle = ggtext::element_textbox_simple(family = font_1, margin = margin(2, 0, 2, 0, "mm"),
-                                                   size = 12),
+    plot.margin = unit(c(4, 4, 4, 4), "mm"),
+    plot.title = element_text(family = font_1, size = 15, hjust = 0, face = "plain", margin = margin(0, 0, 2, 0, "mm"), color = "black"),
+    plot.subtitle = ggtext::element_textbox_simple(
+      family = font_1, margin = margin(2, 0, 2, 0, "mm"),
+      size = 12
+    ),
     axis.text = element_text(family = font_2, size = 7, color = "black"),
     axis.text.y = element_blank(),
     axis.title = element_text(family = font_2, size = 8, color = "black"),
@@ -103,4 +105,3 @@ centenarians |>
   )
 
 ggsave("oldest_people.png")
- 

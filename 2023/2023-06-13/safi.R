@@ -27,7 +27,7 @@ v_colors <- c("#8fb1bc", "#6e677d", "#2f4554")
 
 plot_bg <- "#E8EAE7"
 
-safi_data <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-13/safi_data.csv') |>
+safi_data <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-06-13/safi_data.csv") |>
   janitor::clean_names()
 
 result_df <- safi_data %>%
@@ -39,7 +39,7 @@ result_df <- safi_data %>%
 perc_household <- result_df %>%
   select(1:2, starts_with("has_")) |>
   group_by(village) |>
-  summarise(n=n(), across(c(3:19), ~ sum(.x, na.rm = TRUE)/n))
+  summarise(n = n(), across(c(3:19), ~ sum(.x, na.rm = TRUE) / n))
 
 perc_household <- perc_household |>
   pivot_longer(
@@ -58,9 +58,11 @@ perc_household |>
   geom_text(aes(label = paste0(round(has_item * 100, 1), "%")), position = position_dodge(width = 0.9), vjust = -0.5) +
   scale_fill_manual(values = v_colors) +
   scale_color_manual(values = v_colors) +
-  labs(title = "Percentage of Households Possessing Item in SAFI Survey",
-       subtitle = "Comparative Analysis Across Villages",
-       caption = caption) +
+  labs(
+    title = "Percentage of Households Possessing Item in SAFI Survey",
+    subtitle = "Comparative Analysis Across Villages",
+    caption = caption
+  ) +
   theme_minimal() +
   theme(
     plot.background = element_rect(fill = plot_bg, color = plot_bg),
@@ -88,4 +90,4 @@ perc_household |>
     axis.title = element_blank()
   )
 
-ggsave("safi.png")  
+ggsave("safi.png")

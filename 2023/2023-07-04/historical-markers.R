@@ -1,7 +1,9 @@
-pacman::p_load(tidyverse,
-               collapse,
-               showtext,
-               htmltools)
+pacman::p_load(
+  tidyverse,
+  collapse,
+  showtext,
+  htmltools
+)
 
 showtext_auto()
 showtext_opts(dpi = 300)
@@ -26,7 +28,7 @@ plot_bg <- "#F8FBF9"
 text_col <- "#20202A"
 col_col <- "#7F879C"
 
-historical_markers <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-07-04/historical_markers.csv')
+historical_markers <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-07-04/historical_markers.csv")
 
 missing_by_year <- historical_markers |>
   drop_na(missing) |>
@@ -48,11 +50,12 @@ change_markers_by_year |>
   scale_x_continuous(breaks = seq(1848, 2025, by = 25)) +
   scale_y_continuous(labels = scales::percent_format(scale = 1, big.mark = ",")) +
   theme_minimal() +
-  labs(title = "Growth Rate of Historical Markers in the US",
-       caption = caption,
-       x = "Year Erected",
-       y = "Growth Rate"
-       ) +
+  labs(
+    title = "Growth Rate of Historical Markers in the US",
+    caption = caption,
+    x = "Year Erected",
+    y = "Growth Rate"
+  ) +
   theme(
     plot.background = element_rect(fill = plot_bg, color = plot_bg),
     panel.background = element_rect(fill = plot_bg, color = plot_bg),
@@ -61,9 +64,9 @@ change_markers_by_year |>
       margin = margin(6, 0, 0, 0),
       halign = 1, color = text_col, size = 7
     ),
-    plot.title = element_text(family = font_1, color = text_col, margin = margin(5,0,5,0), hjust = .5),
-    axis.title = element_text(family = font_2, color = text_col, margin = margin(1,1,1,1)),
-    axis.text = element_text(family = font_2, color = text_col, margin = margin(4,4,4,4))
+    plot.title = element_text(family = font_1, color = text_col, margin = margin(5, 0, 5, 0), hjust = .5),
+    axis.title = element_text(family = font_2, color = text_col, margin = margin(1, 1, 1, 1)),
+    axis.text = element_text(family = font_2, color = text_col, margin = margin(4, 4, 4, 4))
   )
 
 ggsave("historical-markers.png")

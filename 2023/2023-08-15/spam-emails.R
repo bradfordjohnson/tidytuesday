@@ -1,16 +1,20 @@
-pacman::p_load(tidyverse,
-               caret,
-               randomForest,
-               pROC,
-               htmltools,
-               showtext,
-               htmltools)
+pacman::p_load(
+  tidyverse,
+  caret,
+  randomForest,
+  pROC,
+  htmltools,
+  showtext,
+  htmltools
+)
 
 showtext_auto()
 showtext_opts(dpi = 300)
 
-font_add(family = "fb", regular =
-           "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf")
+font_add(
+  family = "fb", regular =
+    "C:/Users/Bradf/AppData/Local/Microsoft/Windows/Fonts/Font Awesome 6 Brands-Regular-400.otf"
+)
 
 font_add_google(name = "Roboto Slab", family = "Roboto Slab")
 font_1 <- "Roboto Slab"
@@ -34,19 +38,21 @@ text_color_2 <- "#ECEFF4"
 
 spam <-
   readr::read_csv(
-    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-15/spam.csv'
+    "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-15/spam.csv"
   )
 
 data_selected <- spam %>%
   select(crl.tot, dollar, bang, money, n000, make, yesno) %>%
-  mutate(yesno = case_when(yesno == "n" ~ "Not Spam",
-                           yesno == "y" ~ "Spam"))
+  mutate(yesno = case_when(
+    yesno == "n" ~ "Not Spam",
+    yesno == "y" ~ "Spam"
+  ))
 
 set.seed(123)
 trainIndex <-
   createDataPartition(data_selected$yesno, p = 0.7, list = FALSE)
-training_data <- data_selected[trainIndex,]
-testing_data <- data_selected[-trainIndex,]
+training_data <- data_selected[trainIndex, ]
+testing_data <- data_selected[-trainIndex, ]
 
 training_data$yesno <- as.factor(training_data$yesno)
 testing_data$yesno <- as.factor(testing_data$yesno)
@@ -116,4 +122,3 @@ ggplot(data = confusion_df, aes(x = Reference, y = Prediction)) +
   )
 
 ggsave("spam-emails.png", width = 6, height = 6, dpi = 300)
-

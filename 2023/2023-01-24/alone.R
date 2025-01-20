@@ -12,7 +12,7 @@ font_add(
 )
 
 ## create caption
-caption = paste0(
+caption <- paste0(
   "<span style='font-family:fb;color:#7A7973;'>&#xf09b;</span>", "<span style='font-family:sans;color:#FFFFFF;'>.</span>",
   "<span style='font-family:Unbuntu;color:#7A7973;'>bradfordjohnson | TidyTuesday - 2023 Week 4 | Original Code: Cedric Scherer</span>"
 )
@@ -119,7 +119,8 @@ p <- p + geom_line(
 ) +
   geom_line(
     data = df_lines, aes(
-      x_group, y, color = season,
+      x_group, y,
+      color = season,
       color = after_scale(colorspace::darken(color, 0.2))
     ),
     size = 2.5
@@ -130,7 +131,8 @@ p
 
 p <- p + geom_label(
   aes(
-    mid, 10.12, label = glue::glue(" Season {season} "),
+    mid, 10.12,
+    label = glue::glue(" Season {season} "),
     color = season,
     color = after_scale(colorspace::darken(color, 0.2))
   ),
@@ -151,7 +153,7 @@ p <- p + scale_x_continuous(expand = c(0.015, 0.015)) +
   scale_color_manual(
     values = c(
       "#232d5c", "#52346f", "#833777", "#b13a74", "#d74567", "#f35d51",
-               "#ff7f35", "#ffa600"
+      "#ff7f35", "#ffa600"
     ),
     guide = "none"
   ) +
