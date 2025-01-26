@@ -2,6 +2,8 @@
 
 ## 2025-01-07
 
+[![](2025-01-07/atlanta-crime.png)](2025-01-07/axon-crime-data.R)
+
 ## 2025-01-14
 
 [![](2025-01-14/posit-conf-talks.png)](2025-01-14/posit-conf-talks.R)
