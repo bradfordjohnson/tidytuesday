@@ -1,0 +1,107 @@
+---
+pagetitle: Ford Johnson | TidyTuesday
+hide-title: true
+lightbox: true
+---
+
+::: {.column-page}
+
+# TidyTuesday Gallery
+
+## 2025
+
+::: {.photo-grid}
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2025/2025-01-07/atlanta-crime.png){group="2025"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2025/2025-01-14/posit-conf-talks.png){group="2025"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2025/2025-01-28/water-insecurity.png){group="2025"}
+
+:::
+
+
+## 2024
+
+::: {.photo-grid}
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2024/2024-01-09/nhl-births.png){group="2024"}
+
+
+:::
+
+## 2023
+
+::: {.photo-grid}
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-01-03/rfid-v1.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-01-10/birds.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-01-17/art-history-v2.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-01-24/alone.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-01-31/cats.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-02-07/stocks-v2.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-02-14/age-gaps.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-02-21/bob-ross.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-02-28/african-languages.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-03-07/numbats.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-03-14/euro-drugs.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-03-21/programming.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-03-28/timezones-v2.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-04-04/soccer.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-04-11/eggs.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-04-18/crops.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-04-25/london_marathon.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-05-02/portal_project.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-05-09/child_care.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-05-16/tornados.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-05-23/squirrels.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-05-30/oldest_people.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-06-06/owid_energy.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-06-13/safi.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-06-20/ufo.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-06-27/us-pop-places.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-07-04/historical-markers.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-07-11/global-temps.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-07-18/gpt.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-07-25/scurvy.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-08-01/us-states.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-08-08/hot-ones.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-08-15/spam-emails.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-08-22/refugees.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-08-29/fair-use.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/2023/2023-09-05/union-membership.png){group="2023"}
+:::
+
+:::

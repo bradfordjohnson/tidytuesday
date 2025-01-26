@@ -3,18 +3,28 @@ project:
   output-dir: docs
 
 website:
-  title: "tidytuesday.fordjohnson.dev"
+  title: "Ford Johnson"
   site-url: https://tidytuesday.fordjohnson.dev
   search: false
   navbar:
-    left:
-      - about.qmd
+    right:
+      - icon: github
+        href: https://github.com/bradfordjohnson
+      - icon: linkedin
+        href: https://linkedin.com/in/bradford-ford-johnson
+  page-footer:
+    center:
+      - icon: github
+        href: https://github.com/bradfordjohnson
+      - icon: linkedin
+        href: https://linkedin.com/in/bradford-ford-johnson
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+    anchor-sections: false
+    theme: styles.scss
+    toc: false
+    canonical-url: true
 
 
 
