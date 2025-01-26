@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "tidytuesday.fordjohnson.dev"
+  site-url: https://tidytuesday.fordjohnson.dev
+  search: false
+  navbar:
+    left:
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
