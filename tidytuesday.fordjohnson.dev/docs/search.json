@@ -1,9 +1,16 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "about/index.html",
+    "href": "about/index.html",
     "title": "About",
     "section": "",
-    "text": "Testing subdomain."
+    "text": "TidyTuesday is a weekly data visualization and analysis challenge designed to encourage the use of R and the tidyverse. Each week, participants work with publicly available datasets to create compelling visuals, uncover insights, and improve their data wrangling and storytelling skills while sharing their work with the community."
+  },
+  {
+    "objectID": "about/index.html#examples",
+    "href": "about/index.html#examples",
+    "title": "About",
+    "section": "Examples",
+    "text": "Examples\nWatch how a simple ggplot evolves into a customized, polished visualization. These examples showcase the creative process of enhancing plain plots with thoughtful design choices, transforming raw data into impactful visuals."
   }
 ]
