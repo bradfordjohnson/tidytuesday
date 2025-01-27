@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tidytuesday.fordjohnson.dev/index.html</loc>
-    <lastmod>2025-01-26T20:33:58.677Z</lastmod>
+    <lastmod>2025-01-27T01:34:20.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tidytuesday.fordjohnson.dev/about.html</loc>
+    <lastmod>2025-01-27T01:45:56.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tidytuesday.fordjohnson.dev/about/index.html</loc>
+    <lastmod>2025-01-27T01:50:19.458Z</lastmod>
   </url>
 </urlset>
