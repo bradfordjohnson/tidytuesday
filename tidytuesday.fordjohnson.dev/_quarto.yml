@@ -5,9 +5,14 @@ project:
 website:
   title: "Ford Johnson"
   site-url: https://tidytuesday.fordjohnson.dev
+  open-graph: true
   search: false
+  cookie-consent: true
+  favicon: images/favicon.png
   navbar:
-    right:    
+    right:
+      - text: Portfolio
+        href: https://fordjohnson.dev/
       - text: About
         href: about/index.qmd
       - icon: github
@@ -20,9 +25,20 @@ website:
         href: https://github.com/bradfordjohnson
       - icon: linkedin
         href: https://linkedin.com/in/bradford-ford-johnson
+  announcement: 
+    icon: rocket-takeoff
+    dismissable: true
+    content: |
+      Welcome to my new TidyTuesday page! Explore my contributions to the TidyTuesday project and check out the code <a href="https://github.com/bradfordjohnson/tidytuesday/tree/main"> here</a>.
+    type: primary
+    position: below-navbar
 
 format:
   html:
+    include-in-header:
+      - text: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW8S5XBD');</script>
+    include-before-body:
+      - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8S5XBD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     anchor-sections: false
     theme: styles.scss
     toc: false
