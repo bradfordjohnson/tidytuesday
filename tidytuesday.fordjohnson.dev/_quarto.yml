@@ -29,7 +29,7 @@ website:
     icon: rocket-takeoff
     dismissable: true
     content: |
-      Welcome to my new TidyTuesday page! Explore my contributions to the TidyTuesday project and check out the code <a href="https://github.com/bradfordjohnson/tidytuesday/tree/main"> here</a>.
+      Welcome! Explore my contributions to the TidyTuesday project and check out the code <a href="https://github.com/bradfordjohnson/tidytuesday/tree/main"> here</a>.
     type: primary
     position: below-navbar
 
