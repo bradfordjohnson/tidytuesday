@@ -102,6 +102,8 @@ lightbox: true
 ![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-08-29/fair-use.png){group="2023"}
 
 ![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-09-05/union-membership.png){group="2023"}
+
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-09-12/global-human-day.png){group="2023"}
 :::
 
 :::
