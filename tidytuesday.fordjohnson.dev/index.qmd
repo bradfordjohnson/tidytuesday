@@ -15,6 +15,8 @@ lightbox: true
 
 ![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-01-14/posit-conf-talks.png){group="2025"}
 
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-01-21/himalayan-expeditions.png){group="2025"}
+
 ![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-01-28/water-insecurity.png){group="2025"}
 
 ![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-02-04/simpsons.png){group="2025"}
