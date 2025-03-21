@@ -1,5 +1,7 @@
 ---
 pagetitle: Ford Johnson | TidyTuesday
+description-meta: Explore Ford Johnson’s TidyTuesday visual gallery—data-driven charts, insights, and creative visualizations from weekly data challenges. Dive into unique analyses and storytelling with R.
+include-in-header: image-data.txt
 hide-title: true
 lightbox: true
 ---

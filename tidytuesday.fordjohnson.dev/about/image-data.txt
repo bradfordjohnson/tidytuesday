@@ -1,0 +1,86 @@
+<script type="application/ld+json">
+    [{
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-02-21/bob-ross.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    },
+    {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-02-28/african-languages.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    },
+    {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-03-07/numbats.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    },
+    {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-03-21/programming.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    },
+    {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-04/soccer.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    },
+    {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-11/eggs1.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    },
+    {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-25/london_marathon.gif",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creditText": "Ford Johnson",
+        "creator": {
+        "@type": "Person",
+        "name": "Ford Johnson"
+        },
+        "copyrightNotice": "Ford Johnson"
+    }]
+</script>
