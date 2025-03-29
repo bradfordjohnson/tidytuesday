@@ -1,0 +1,13 @@
+```{=html}
+<% items.forEach(group => { %>
+  <h2><%= group.year %></h2>
+
+  <div class="photo-grid">
+    <% group.visuals.forEach(photo => { %>
+      <a href="<%= photo.url %>" class="lightbox" data-gallery="<%= group.year %>" data-original-href="<%= photo.url %>">
+        <img src="<%= photo.url %>" class="img-fluid" alt="<%= photo.alt %>">
+      </a>
+    <% }); %>
+  </div>
+<% }); %>
+```

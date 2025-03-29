@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "TidyTuesday | Ford Johnson"
+  title: "Ford Johnson"
   site-url: https://tidytuesday.fordjohnson.dev
   open-graph: true
   search: false
@@ -12,8 +12,6 @@ website:
     right:
       - text: Portfolio
         href: https://fordjohnson.dev/
-      - text: About
-        href: about/index.qmd
   page-footer:
     center:
       - icon: github
@@ -36,7 +34,7 @@ format:
       - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     anchor-sections: false
     theme: styles.scss
-    toc: false
+    toc: true
     canonical-url: true
 
 
