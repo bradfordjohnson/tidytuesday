@@ -97,4 +97,4 @@ ggraph(bigram_graph, layout = "fr") +
     ),
   )
 
-ggsave("ufo.png")
+ggsave("ufo.png", width = 8, height = 6)
