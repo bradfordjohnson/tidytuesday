@@ -10,6 +10,8 @@
     alt: "Water Insecurity Data"
   - url: "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-02-04/simpsons.png"
     alt: "Simpsons Character Data"
+  - url: "https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2025/2025-02-18/agencies.png"
+    alt: "Agencies from the FBI Crime Data API"
 
 - year: 2024
   visuals:
