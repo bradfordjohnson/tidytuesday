@@ -26,7 +26,7 @@ def setup_tidytuesday_project(year: int, month: int, day: int):
     folder_path = ROOT_PATH / str(d.year) / d.isoformat()
     folder_path.mkdir(parents=True, exist_ok=True)
 
-    r_file_path = folder_path / f"{d.isoformat()}.R"
+    r_file_path = folder_path / "code.R"
     
     folder_path_str = str(folder_path).replace("\\", "/")
     if not r_file_path.exists():
