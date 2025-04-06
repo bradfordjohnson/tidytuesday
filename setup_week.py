@@ -27,9 +27,11 @@ def setup_tidytuesday_project(year: int, month: int, day: int):
     folder_path.mkdir(parents=True, exist_ok=True)
 
     r_file_path = folder_path / f"{d.isoformat()}.R"
+    
+    folder_path_str = str(folder_path).replace("\\", "/")
     if not r_file_path.exists():
         with r_file_path.open("w") as f:
-            f.write("library(tidytuesday)\n")
+            f.write(f'library(tidytuesday)\n\n\nggsave("{folder_path_str}/image.png")\n')
         print(f"Created file: {r_file_path}")
     else:
         print(f"File already exists: {r_file_path}")
