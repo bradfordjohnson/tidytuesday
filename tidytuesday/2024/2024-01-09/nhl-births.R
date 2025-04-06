@@ -77,4 +77,4 @@ plot <- total_players_by_dimensions %>%
     plot
   )
 
-ggsave("2024/2024-01-09/nhl-births.png", plot = plot)
+ggsave("2024/2024-01-09/image.png", plot = plot)

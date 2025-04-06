@@ -99,4 +99,4 @@ gt_table <- result %>%
     table.border.bottom.width = px(0)
   )
 
-gtsave(gt_table, filename = "2025/2025-01-28/water-insecurity.png")
+gtsave(gt_table, filename = "2025/2025-01-28/image.png")
