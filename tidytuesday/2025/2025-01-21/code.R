@@ -38,4 +38,4 @@ oxygen_trends %>%
     plot.subtitle = element_text(size = 12)
   )
 
-ggsave("tidytuesday/2025/2025-01-21/himalayan-expeditions.png", width = 10, height = 5)
+ggsave("tidytuesday/2025/2025-01-21/image.png", width = 10, height = 5)

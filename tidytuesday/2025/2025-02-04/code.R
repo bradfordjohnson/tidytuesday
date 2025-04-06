@@ -46,4 +46,4 @@ character_words_spoken_by_episode %>%
     strip.text = element_text(size = 10, face = "bold")
   )
 
-ggsave("tidytuesday/2025/2025-02-04/simpsons.png", scale = 2.5)
+ggsave("tidytuesday/2025/2025-02-04/image.png", scale = 2.5)

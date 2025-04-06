@@ -59,4 +59,4 @@ ggplot(word_comparison_long, aes(x = word, y = frequency, group = word, color = 
     panel.background = element_rect(fill = "white", color = "white")
   )
 
-ggsave("2025/2025-01-14/posit-conf-talks.png", scale = .75)
+ggsave("2025/2025-01-14/image.png", scale = .75)

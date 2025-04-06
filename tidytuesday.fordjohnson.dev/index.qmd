@@ -20,11 +20,11 @@ Watch how a simple ggplot evolves into a customized, polished visualization. The
 
 :::{.photo-grid}
 
-![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-02-28/african-languages.gif){group="example"}
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-02-28/animation.gif){group="example"}
 
-![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-04/soccer.gif){group="example"}
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-04/animation.gif){group="example"}
 
-![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-11/eggs1.gif){group="example"}
+![](https://raw.githubusercontent.com/bradfordjohnson/tidytuesday/refs/heads/main/tidytuesday/2023/2023-04-11/animation.gif){group="example"}
 
 :::
 

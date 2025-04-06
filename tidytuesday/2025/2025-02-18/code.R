@@ -44,4 +44,4 @@ filtered_agencies %>%
     plot.caption = element_text(hjust = .01)
   )
 
-ggsave("tidytuesday/2025/2025-02-18/agencies.png", scale = 2.5)
+ggsave("tidytuesday/2025/2025-02-18/image.png", scale = 2.5)

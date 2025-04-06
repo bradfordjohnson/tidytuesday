@@ -2,7 +2,7 @@ library(tidyverse)
 library(janitor)
 library(lubridate)
 
-axon_crime_data <- read_csv("2025/2025-01-07/axon-crime-data-export.csv") %>%
+axon_crime_data <- read_csv("2025/2025-01-07/data.csv") %>%
   clean_names() %>%
   mutate(report_date = as.POSIXct(report_date, format = "%m/%d/%Y %I:%M:%S %p")) %>%
   mutate(
@@ -66,4 +66,4 @@ crimes %>%
     panel.spacing = unit(.25, "cm")
   )
 
-ggsave("2025/2025-01-07/atlanta-crime.png", scale = 3.2)
+ggsave("2025/2025-01-07/image.png", scale = 3.2)
