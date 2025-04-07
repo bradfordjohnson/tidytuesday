@@ -31,7 +31,7 @@ def setup_tidytuesday_project(year: int, month: int, day: int):
     folder_path_str = str(folder_path).replace("\\", "/")
     if not r_file_path.exists():
         with r_file_path.open("w") as f:
-            f.write(f'library(tidytuesday)\n\n\nggsave("{folder_path_str}/image.png")\n')
+            f.write(f'library(tidyverse)\nlibrary(camcorder)\n\ngg_record(dir = "{folder_path_str}/temp", device = "png", width = 10, height = 8, units = "in", dpi = 320)\n\n#ggsave("{folder_path_str}/image.png")\n\n#gg_playback(frame_duration = 0.15, image_resize = 1080, name = "{folder_path_str}/animated.gif", playback = FALSE)')
         print(f"Created file: {r_file_path}")
     else:
         print(f"File already exists: {r_file_path}")
