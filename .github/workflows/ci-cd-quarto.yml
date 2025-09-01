@@ -1,37 +1,48 @@
-name: Deploy portfolio site via GitHub Pages
+name: Quarto CI/CD Deployment
 
 on:
   push:
     branches:
-      - main
+      - master
     paths:
-      - 'tidytuesday.fordjohnson.dev/docs/**'     
+      - "tidytuesday.fordjohnson.dev/**"
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-  
+
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: tidytuesday.fordjohnson.dev
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './tidytuesday.fordjohnson.dev/docs/'
+          path: tidytuesday.fordjohnson.dev/_site
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -1,0 +1,147 @@
+<script>
+  (function () {
+    const notFound = "(not found)";
+
+    // --- Core Helper Functions ---
+    function getDataAttribute(element, attributeName) {
+      return element
+        ? element.getAttribute(`data-${attributeName}`) || notFound
+        : notFound;
+    }
+
+    /**
+     * Maps known class patterns to component names.
+     */
+    function getComponentFromClass(el) {
+      if (!el || !el.classList) return notFound;
+
+      const classList = [...el.classList].map((c) => c.toLowerCase());
+
+      // --- Specific listing-related matches ---
+      if (classList.includes("listing-title")) return "listing_title";
+      if (classList.includes("listing-subtitle")) return "listing_subtitle";
+      if (classList.includes("source-code")) return "source_code";
+
+      // --- General UI components ---
+      if (classList.includes("lightbox")) return "lightbox";
+      if (classList.includes("modal")) return "modal";
+      if (classList.includes("nav-link")) return "button";
+      if (classList.includes("navbar-brand-logo")) return "logo";
+
+      // --- Partial matches ---
+      if (classList.some((cls) => cls.includes("btn"))) return "button";
+      if (classList.some((cls) => cls.includes("card"))) return "card";
+      if (classList.some((cls) => cls.includes("icon"))) return "icon";
+
+      return notFound;
+    }
+
+    // --- New code to extract page_publishing_platform ---
+    let pagePublishingPlatform = notFound;
+    const generatorMeta = document.querySelector('meta[name="generator"]');
+    if (generatorMeta && generatorMeta.content) {
+      pagePublishingPlatform = generatorMeta.content;
+    }
+    // --- End of new code ---
+
+    // --- Main Event Listener Framework ---
+    document.addEventListener("click", function (event) {
+      const clickedElement = event.target;
+      const trackableElement = clickedElement.closest(
+        "a, button, [data-track-click='true']"
+      );
+
+      if (!trackableElement) return;
+      const el = trackableElement;
+
+      // Event Name
+      const eventName =
+        getDataAttribute(el, "ga4-event-name") !== notFound
+          ? getDataAttribute(el, "ga4-event-name")
+          : "interaction";
+
+      // Component (priority: data-component > class mapping > id > tag)
+      let component = getDataAttribute(el, "component");
+      if (component === notFound) {
+        component = getComponentFromClass(el);
+      }
+      if (component === notFound) {
+        component = el.id ? `id_${el.id}` : el.tagName.toLowerCase();
+      }
+
+      // Text
+      let text = getDataAttribute(el, "ga4-text");
+      if (text === notFound) {
+        text = el.getAttribute("aria-label") || notFound;
+      }
+      if (text === notFound) {
+        text = (el.innerText || el.textContent || "").trim();
+        if (!text) text = notFound;
+      }
+
+      // Destination URL
+      let destinationUrl = getDataAttribute(el, "destination-url");
+      if (destinationUrl === notFound && el.tagName === "A") {
+        destinationUrl = el.href || notFound;
+      }
+
+      // Section (same as you had before)
+      function getSection(element) {
+        if (!element) return "(not found)";
+        let current = element;
+        while (current && current !== document.body) {
+          const dataSection = current.getAttribute("data-section");
+          if (dataSection) return dataSection;
+          if (current.id) {
+            if (current.id.toLowerCase().includes("navbar")) return "navbar";
+            if (current.id.toLowerCase().includes("hero")) return "hero";
+            if (current.id.toLowerCase().includes("footer")) return "footer";
+            if (current.id.toLowerCase().includes("listing"))
+              return current.id.toLowerCase();
+          }
+          if (current.classList) {
+            if ([...current.classList].some((cls) => cls.includes("hero")))
+              return "hero";
+            if ([...current.classList].some((cls) => cls.includes("navbar")))
+              return "navbar";
+            if ([...current.classList].some((cls) => cls.includes("footer")))
+              return "footer";
+          }
+          current = current.parentElement;
+        }
+        return "body";
+      }
+
+      let position = getDataAttribute(el, "position");
+      if (position === notFound) {
+        position = getSection(el);
+      }
+
+      // Build eventData
+      const eventData = {
+        event: eventName,
+        component: component,
+        text: text,
+        position: position,
+        destination_url: destinationUrl,
+        // --- Add the new parameter here ---
+        page_publishing_platform: pagePublishingPlatform,
+        // --- End of new parameter ---
+      };
+
+      // Clean up
+      for (const key in eventData) {
+        if (eventData[key] === notFound || eventData[key] === undefined) {
+          delete eventData[key];
+        }
+      }
+
+      // Push to dataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(eventData);
+      console.log("GA4 Interaction Event Pushed to DataLayer:", eventData);
+    });
+
+    console.log("GA4 Interaction Tracking (Class Mapping) Deployed.");
+  })();
+</script>

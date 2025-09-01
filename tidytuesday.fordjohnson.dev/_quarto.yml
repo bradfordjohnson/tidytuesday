@@ -1,17 +1,23 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
+  preview:
+    port: 4000
+    timeout: 1200
 
 website:
   title: "Ford Johnson"
   site-url: https://tidytuesday.fordjohnson.dev
   open-graph: true
   search: false
-  favicon: images/favicon.png
+  favicon: images/logo.png
+
   navbar:
+    background: white
     right:
       - text: Portfolio
         href: https://fordjohnson.dev/
+
   page-footer:
     center:
       - icon: github
@@ -29,13 +35,10 @@ website:
 format:
   html:
     include-in-header:
-      - text: <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W39B6FZ6');</script>
-    include-before-body:
-      - text: <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W39B6FZ6"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      - ga4/gtm_header.html
+      - ga4/gtm_click_listener.html
+    include-before-body: ga4/gtm_body.html
     anchor-sections: false
     theme: styles.scss
     toc: true
     canonical-url: true
-
-
-
