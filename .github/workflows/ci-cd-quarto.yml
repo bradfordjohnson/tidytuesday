@@ -3,7 +3,7 @@ name: Quarto CI/CD Deployment
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "tidytuesday.fordjohnson.dev/**"
   workflow_dispatch:
