@@ -8,7 +8,7 @@ I love engaging with diverse datasets, refining my visualization skills, and lea
 
 Check out my TidyTuesday gallery, where data transforms into compelling stories through creative visualizations!
 
-[Explore the Gallery](https://tidytuesday.fordjohnson.dev/)
+[Explore the Gallery](https://fordjohnson.com/projects/tidytuesday/)
 
 ---
 
